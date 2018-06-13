@@ -5,12 +5,37 @@
 <?php
     include 'userheader.php';
 ?>
+		<style>
+			button {
+				background-color: #333333; 
+				border: none;
+				color: white;
+				padding: 15px 60px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 20px 20px 15px 20px;
+				}
+			.center {
+				margin: auto ;
+				margin-top: 15px;
+				width: 50%;
+				padding-left:35px;
+				border: 2px solid grey;
+				background-color: #c6cbd3;
+				}
+			button:hover {
+			        background-color: #111111;
+				color: white; }
+		</style>
+		
 
 		
 
 		<form action="create.php" method="post">
 			<div class="center">
-				<h1>Registration Details</h1>
+				<h1 style="text-align:center;">Registration Details</h1>
 				User Name: <input type="text" name="uname" value="" required/><br><br>
 				First Name: <input type="text" name="fname" value="" required/><br><br>
 				Last Name: <input type="text" name="lname" value="" required/><br><br>
@@ -47,8 +72,8 @@
 					<option value="Mech001">Tinkering</option>
 					<option value="Carp001">Wood works</option>	
 				</select><br><br>
-				<button type="submit" name="submit" class="center">Create Customer Account</button>
-				<button type="submit" name="submit2" class="center">Create Technician Account</button>
+				<button type="submit" name="submit">Create Customer Account</button>
+				<button type="submit" name="submit2">Create Technician Account</button>
 			</div>
 		</form>
 
