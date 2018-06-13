@@ -47,3 +47,7 @@ Remember to save the file as a php file. (example -> file.php)
 
     </body>
     </html>
+ 
+ 
+ 
+ connected about us page to the website
