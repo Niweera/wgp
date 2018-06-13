@@ -20,6 +20,7 @@
 			.center {
 				margin: auto ;
 				margin-top: 15px;
+				margin-bottom: 15px;
 				width: 50%;
 				padding: 10px 90px 10px 10px;
 				text-align: center;
@@ -108,6 +109,10 @@
 			<input type="text" name="dname"><br><br>
 			<button type="submit" name="del">Delete Customer</button>
 			<button type="submit" name="del2" onclick=myfunction()>Delete Technician</button>
+		</form>
+
+		<form>
+		<br><br><br>
 		</form>
 
 		<footer>

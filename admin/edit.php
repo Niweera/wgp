@@ -6,7 +6,7 @@
     include 'userheader.php';
 ?>
 <style>
-button {
+				button {
 				background-color: #333333; 
 				border: none;
 				color: white;
@@ -20,6 +20,7 @@ button {
 				.center {
 				margin: auto ;
 				margin-top: 15px;
+				margin-bottom: 15px;
 				width: 50%;
 				padding: 10px;
 				text-align: center;
@@ -45,7 +46,7 @@ button {
 		<form method="post" action="edit.php">
 			Enter username: <input type="text" name="uname"><br><br>
 			<button type="submit" name="sub">Search Customer</button>
-			<button type="submit" name="sub2">Search Technician</button><br><br>
+			<button type="submit" name="sub2">Search Technician</button><br>
 		</form>
 		</div>
 		<?php
@@ -55,7 +56,7 @@ button {
 					$result=mysqli_query($conn,$sql);
 					$queryResult=mysqli_num_rows($result);
 					if ($queryResult > 0){
-						echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p><br/><br/>";
+						echo "<p style=\"font-size:18px;text-align:center\">User is available</p>";
 						echo "<div class=\"rest\">";
 						echo "<table style=\"width:100%\">";
 						echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th></tr>";
@@ -80,7 +81,7 @@ button {
 				$result=mysqli_query($conn,$sql);
 				$queryResult=mysqli_num_rows($result);
 				if ($queryResult > 0){
-					echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p><br/><br/>";
+					echo "<p style=\"font-size:18px;text-align:center\">User is available</p>";
 					echo "<div class=\"rest\">";
 					echo "<table style=\"width:100%\">";
 					echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th><th>Occupation</th><th>City</th></tr>";

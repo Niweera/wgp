@@ -20,6 +20,7 @@
 			.center {
 				margin: auto ;
 				margin-top: 15px;
+				margin-bottom: 15px;
 				width: 50%;
 				padding-left:35px;
 				border: 2px solid grey;
@@ -78,7 +79,7 @@
 		</form>
 
 		<footer>
-		<div class="footer" style="position:fixed">
+		<div class="footer" style="position:relative">
 		<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 		<div class="footerright">
 			<a href="#home">Link 1</a>
