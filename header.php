@@ -6,6 +6,8 @@
 <html>
 <head>
   <title>Find Lanka</title>
+  <link rel="stylesheet" type="text/css" href="./main.css">
   <link rel="stylesheet" type="text/css" href="./style.css">
+
 </head>
 <body>
