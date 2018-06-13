@@ -4,9 +4,9 @@
 
   <header>
     <div class="navbar">
-        <a href="./" class="logo">FIND LANKA</a>
+        <a href="../" class="logo">FIND LANKA</a>
         <div class="rightnav">
-          <a class="active" href="./admin.php">Home</a>
+          <a class="active" href="./">Home</a>
           <a href="./users.php">User Administration</a>
           <a href="#contact">Customer Requests</a>
           <a href="#services">Technicians</a>
