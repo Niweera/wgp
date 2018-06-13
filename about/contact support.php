@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-
-	<html>
-		<head>
-			<title>Contact Support</title>
-			<link rel = "stylesheet" type ="text/css" href = "main.css">
-		</head>
-		
-		<body>
+<?php
+    include 'header.php';
+?> 
+		<header>
+			<div class="navbar">
+				<a href="../" class="logo">FIND LANKA</a>
+				<div class="rightnav">
+					<a href="../">Home</a>
+					<a href="./">About Us</a>
+					<a class="active" href="./contact us.php">Contact Us</a>
+					<a href="#services">Services</a>
+					<a href="#help">Help</a>
+					<a href="#login">Log in</a>
+				</div>
+			</div>
+		</header>
 			<div class = "wrapper">
-				<div class = "top-bar clearfix">
-					<div class = "top-bar-links">
-						<ul>
-							<li><a href = "home.php">Home</a></li>
-							<li><a href = "facilities.php">Facilities</a></li>
-							<li><a href = "help.php">Help</a></li>
-							<li><a href = "about us.php">About Us</a></li>
-							<li><a href = "contact us.php">Contact Us</a></li>
-							<li><a href = "login.php">Sing In</a></li>
-						</ul>
-					</div><!--top-bar-links-->
-					<div class = "name">
-						<b><i>TechGuru</b></i>
-					</div><!--name-->
-				</div><!--top-bar-->
-				<header class = "clearfix">
-					<div class = "topic">
-							<b><u><h1>CONTACT SUPPORT</h1></b></u>
-					</div><!--topic-->
-				</header>
 				<nav>
 					<ul>
 						<li><a href = "contact us.php">Contact Us</a></li>
-						<li><a href = "contact support.php">Contact Support</a></li>
+						<li><a class="active" href = "contact support.php">Contact Support</a></li>
 					</ul>
 				</nav>
 					<form>
@@ -81,7 +68,7 @@
 							<td><Note</td>
 							<td>
 								<textarea name="message" rows="10" cols="50">
-								Please write your note hear
+								Please write your note here
 								</textarea>
 							</td>
 						</tr>
@@ -98,12 +85,18 @@
 					</table>
 						</div><!--table-design-->
 					</form>
-				<footer>
-					<div class = "copyright">
-						Copyrights &copy; Domain Name. All Right Reserved
-					</div><!--copyrights-->
-				</footer>
 			</div><!--wrapper-->
+			<footer>
+				<div class="footer" style="position:fixed">
+				<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+				<div class="footerright">
+					<a href="#home">Link 1</a>
+					<a href="#about">Link 2</a>
+					<a href="#contact">Link 2</a>
+				</div>
+				<div style="clear: both;"></div>
+				</div>
+			</footer>
 		</body>
 	</html>
 		

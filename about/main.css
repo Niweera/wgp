@@ -50,7 +50,7 @@ header
 }
 nav{
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 2px;
 	background: #000;
 	background: linear-gradient(#0d0d0d, #404040, #0d0d0d);
 	border-radius: 10px;
@@ -70,6 +70,15 @@ nav ul li a{
 nav ul li a:hover{
 	color: red;
 }
+
+nav ul li a.active {
+	padding: 3px;
+	border-radius: 4px;
+	background-color: #7f858e;
+	color: white;
+  }
+
+
 .table{
 	width: 1300px;
 	margin: 60px;
@@ -219,7 +228,10 @@ nav ul li a:hover{
 	float: left;
 }
 form {
-	margin: 40px;
+	margin-top:10px;
+	margin-bottom: 10px;
+	margin-left:20px;
+	margin-right: auto;
 	font-size: 20px;
 	float:left;
 }
