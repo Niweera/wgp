@@ -5,7 +5,39 @@
 <?php
     include 'userheader.php';
 ?>
-
+		<style>
+			button {
+				background-color: #333333; 
+				border: none;
+				color: white;
+				padding: 15px 80px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 20px 20px 15px 20px;
+				}
+			.center {
+				margin: auto ;
+				margin-top: 15px;
+				width: 50%;
+				padding: 10px 90px 10px 10px;
+				text-align: center;
+				border: 2px solid grey;
+				background-color: #c6cbd3;
+				}
+			button:hover {
+				  background-color: #111111;
+				color: white; }
+			.rest {
+				margin: auto ;
+				margin-top: 15px;
+				width: 60%;
+				padding: 10px 10px 10px 50px;
+				text-align: center;
+				background-color: #cbd1db;
+				}
+		</style>
 		
 
 		<h1>Search & Delete</h1>
@@ -23,7 +55,8 @@
 				$result=mysqli_query($conn,$sql);
 				$queryResult=mysqli_num_rows($result);
 				if ($queryResult > 0){
-					echo "<br/><p style=\"font-size:18px;display: inline\">User is available</p><br/><br/>";
+					echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p>";
+					echo "<div class = \"rest\">";
 					echo "<table style=\"width:100%\">";
 					echo "<tr><th>Username</th><th>Contact No</th><th>Email</th></tr>";
 					while ($row=mysqli_fetch_assoc($result)){
@@ -33,8 +66,9 @@
 						echo "<tr><td>".$uname."</td><td>".$cont."</td><td>".$email."</td></tr>";    
 						}
 					echo "</table>";
+					echo "</div>";
 				}else {
-					echo "User not available";
+					echo "<p style=\"text-align:center\">User not available</p>";
 				}
 			}
 		
@@ -44,8 +78,9 @@
 				$result=mysqli_query($conn,$sql);
 				$queryResult=mysqli_num_rows($result);
 				if ($queryResult > 0){
-					echo "<br/><p style=\"font-size:18px;display: inline\">User is available</p><br/><br/>";
-					echo "<table style=\"width:100%\">";
+					echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p><br/><br/>";
+					echo "<div class = \"rest\">";
+					echo "<table style=\"width:50%\">";
 					echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th><th>Occupation</th><th>City</th></tr>";
 					while ($row=mysqli_fetch_assoc($result)){
 						$uname = $row['TechID'];
@@ -58,9 +93,10 @@
 						echo "<tr><td>".$uname."</td><td>".$fname."</td><td>".$lname."</td><td>".$cont."</td><td>".$email."</td><td>".$ocp."</td><td>".$city."</td></tr>";    
 					}
 					echo "</table>";
+					echo "</div>";
 					
 				}else {
-					echo "User not available";
+					echo "<p style=\"text-align:center\">User not available</p>";
 				}
 			}
 		?>
