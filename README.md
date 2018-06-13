@@ -1,4 +1,4 @@
-# online-technical-support-management-system
+# Web Group Project Online Technical Support System ("Find Lanka")
 
 How to add the header and the footer to your webpage
 
