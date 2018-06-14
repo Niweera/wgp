@@ -2,21 +2,49 @@
     include 'header.php';
 ?>
 
-<?php
-    include 'userheader.php';
-?>
 		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+			.content {
+				min-height: 100%;
+			}
+			.content-inside {
+				padding: 0px;
+				padding-bottom: 50px;
+			}
+			.footer {
+				height: 50px;
+				margin-top: -50px;
+			}
+			body {
+				font: 16px Sans-Serif;
+			}
+			h1 {
+				margin: 0 0 20px 0;
+			}
+			p {
+				margin: 20px 0 0 0;
+			}
+			footer {
+				background: #42A5F5;
+				color: white;
+				line-height: 50px;
+				padding: 0 20px;
+			}
+
 			button {
 				background-color: #333333; 
 				border: none;
 				color: white;
-				padding: 15px 80px;
+				padding: 15px 15px;
 				text-align: center;
 				text-decoration: none;
 				display: inline-block;
 				font-size: 16px;
 				margin: 20px 20px 15px 20px;
-				}
+			}
 			.center {
 				margin: auto ;
 				margin-top: 15px;
@@ -26,10 +54,11 @@
 				text-align: center;
 				border: 2px solid grey;
 				background-color: #c6cbd3;
-				}
+			}
 			button:hover {
-				  background-color: #111111;
-				color: white; }
+				background-color: #111111;
+				color: white; 
+			}
 			.rest {
 				margin: auto ;
 				margin-top: 15px;
@@ -37,10 +66,27 @@
 				padding: 10px 10px 10px 50px;
 				text-align: center;
 				background-color: #cbd1db;
-				}
+			}
 		</style>
 		
-
+	<div class="content">
+	<div class="content-inside">
+		<!--<header>
+			<div class="navbar">
+				<a href="../" class="logo">FIND LANKA</a>
+				<div class="rightnav">
+					<a href="./">Home</a>
+					<a class="active" href="./users.php">User Administration</a>
+					<a href="#contact">Customer Requests</a>
+					<a href="#services">Technicians</a>
+					<a href="#help">Reports</a>
+					<a href="#login">Log out</a>
+				</div>
+			</div>
+		</header>-->
+		<?php
+			include 'userheader.php';
+		?>
 		<h1>Search & Delete</h1>
 		<form method="post" action="delete.php" class="center">
 			<p style="font-size:18px;display: inline">Enter username:</p> 
@@ -111,21 +157,19 @@
 			<button type="submit" name="del2" onclick=myfunction()>Delete Technician</button>
 		</form>
 
-		<form>
-		<br><br><br>
-		</form>
+	</div>
+	</div>
 
-		<footer>
-		<div class="footer" style="position:fixed">
-		<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
-		<div class="footerright">
-			<a href="#home">Link 1</a>
-			<a href="#about">Link 2</a>
-			<a href="#contact">Link 2</a>
-		</div>
-		<div style="clear: both;"></div>
-		</div>
+		<footer class="footer">
+			<p class="footerleft" style="margin-top:0"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<div class="footerright">
+				<a href="#home">Link 1</a>
+				<a href="#about">Link 2</a>
+				<a href="#contact">Link 2</a>
+			</div>
+			<div style="clear: both"></div>
 		</footer>
+
 	</body>
 </html>
 
