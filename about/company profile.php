@@ -1,23 +1,42 @@
 <?php
     include 'header.php';
 ?> 
-<?php
-    include 'headerfile.php';
-?>
+
+
+			<header>
+			<div class="navbar">
+				<a href="../" class="logo">FIND LANKA</a>
+				<div class="rightnav">
+					<a href="../">Home</a>
+					<div class="dropdown">
+						<button class="dropbtn"><a class="active" href="./">About Us</a> 
+						</button>
+						<div class="dropdown-content">
+							<a class="active" href="company profile.php">Company Profile</a>
+							<a href="our story.php">Our Story</a>
+							<a href="leadership & management.php">Leadership & Management</a>
+						</div>
+					</div> 
+					<div class="dropdown">
+						<button class="dropbtn"><a href="./contact us.php">Contact Us</a> 
+						</button>
+						<div class="dropdown-content">
+							<a href="contact support.php">Contact Support</a>
+						</div>
+					</div> 
+					<a href="#services">Services</a>
+					<a href="#help">Help</a>
+					<a href="#login">Log in</a>
+				</div>
+			</div>
+		</header>
 
 
 
 			<div class = "wrapper">
-				<nav>
-					<ul>
-						<li><a href = "./">About Us</a></li>
-						<li><a class="active" href = "company profile.php">Company Profile</a></li>
-						<li><a href = "our story.php">Our Story</a></li>
-						<li><a href = "leadership & management.php">Leadership & Management</a></li>
-					</ul>
-				</nav>
 				<div class = "text">
-					<ul type = "disc">
+					<h1 style="margin-top:5px">Company Profile</h1>
+					<ul type = "disc">						
 						<b><u><li>Our Purpose</li></u></b>
 							<h2><u>High levels customer satisfaction</u></h2>
 								<p>TechGuru offers incident based services for Home Solution, Business Solution and Enterprise Solution.

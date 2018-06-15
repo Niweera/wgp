@@ -6,8 +6,22 @@
 				<a href="../" class="logo">FIND LANKA</a>
 				<div class="rightnav">
 					<a href="../">Home</a>
-					<a href="./">About Us</a>
-					<a class="active" href="./contact us.php">Contact Us</a>
+					<div class="dropdown">
+						<button class="dropbtn"><a href="./">About Us</a> 
+						</button>
+						<div class="dropdown-content">
+							<a href="company profile.php">Company Profile</a>
+							<a href="our story.php">Our Story</a>
+							<a href="leadership & management.php">Leadership & Management</a>
+						</div>
+					</div> 
+					<div class="dropdown">
+						<button class="dropbtn"><a class="active" href="./contact us.php">Contact Us</a> 
+						</button>
+						<div class="dropdown-content">
+							<a  class="active" href="contact support.php">Contact Support</a>
+						</div>
+					</div> 
 					<a href="#services">Services</a>
 					<a href="#help">Help</a>
 					<a href="#login">Log in</a>
@@ -15,18 +29,12 @@
 			</div>
 		</header>
 			<div class = "wrapper">
-				<nav>
-					<ul>
-						<li><a href = "contact us.php">Contact Us</a></li>
-						<li><a class="active" href = "contact support.php">Contact Support</a></li>
-					</ul>
-				</nav>
 					<form>
 						<div class = "table-design">
 						<table align=center border= 1>
 						<tr>
 							<body font color="black">
-							<th colspan=2>Send Us Message</th>
+							<th colspan=2>Send Us a Message</th>
 						</tr>
 						<tr>
 							<td>Your Name  *</td>
