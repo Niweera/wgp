@@ -51,7 +51,7 @@ body {
   float: right;
 }
 
-/*.footer {
+.footer {
   position: relative;
   left: 0;
   bottom: 0;
@@ -59,9 +59,9 @@ body {
   background-color: #333333;
   color: white;
   text-align: center;
-}*/
+}
 
-.footer {
+.stickyfooter {
   background: #333333;
   color: white;
   line-height: 50px;

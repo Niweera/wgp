@@ -14,7 +14,7 @@
 				padding: 0px;
 				padding-bottom: 50px;
 			}
-			.footer {
+			.stickyfooter {
 				height: 50px;
 				margin-top: -50px;
 			}
@@ -147,7 +147,7 @@
 			</div>
 		</div>
 
-		<footer class="footer">
+		<footer class="stickyfooter">
 			<p class="footerleft" style="margin-top:0"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">
 				<a href="#home">Link 1</a>
