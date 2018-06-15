@@ -3,47 +3,11 @@
 ?>
 
 		<style>
-			html, body {
-				height: 100%;
-				margin: 0;
-			}
-			.content {
-				min-height: 100%;
-			}
-			.content-inside {
-				padding: 0px;
-				padding-bottom: 50px;
-			}
-			.stickyfooter {
-				height: 50px;
-				margin-top: -50px;
-			}
-			body {
-				font: 16px Sans-Serif;
-			}
-			h1 {
-				margin: 0 0 20px 0;
-			}
-			p {
-				margin: 20px 0 0 0;
-			}
 			footer {
 				background: #42A5F5;
 				color: white;
 				line-height: 50px;
 				padding: 0 20px;
-			}
-
-			button {
-				background-color: #333333; 
-				border: none;
-				color: white;
-				padding: 15px 15px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin: 20px 20px 15px 20px;
 			}
 			.center {
 				margin: auto ;
@@ -55,33 +19,23 @@
 				border: 2px solid grey;
 				background-color: #c6cbd3;
 			}
-			button:hover {
-				background-color: #111111;
-				color: white; 
-			}
-			.rest {
-				margin: auto ;
-				margin-top: 15px;
-				width: 60%;
-				padding: 10px 10px 10px 50px;
-				text-align: center;
-				background-color: #cbd1db;
-			}
 		</style>
 		
 		<div class="content">
-			<div class="content-inside">
+			<div class="content-inside" style="text-align:center">
 				<?php
 					include 'userheader.php';
 				?>
-				<h1>Search & Delete</h1>
-				<form method="post" action="delete.php" class="center">
-					<p style="font-size:18px;display: inline">Enter username:</p> 
-					<input type="text" name="uname"><br><br>
-					<button type="submit" name="sub">Search Customer</button>
-					<button type="submit" name="sub2">Search Technician</button><br><br>
-				</form>
-
+				
+				<h1 style="margin-top:10px">Search & Delete</h1>
+				<div class ="center" style="padding-right:0px">
+					<form method="post" action="delete.php">
+						Enter username: <input type="text" name="uname"><br><br>
+						<button type="submit" name="sub">Search Customer</button>
+						<button type="submit" name="sub2">Search Technician</button><br>
+					</form>
+				</div>
+		
 				<?php 
 					if (null !==(filter_input(INPUT_POST, 'sub'))){
 						$uname=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'uname'));
@@ -137,12 +91,14 @@
 
 				<hr><br>
 
-				<form action="delete.php" method="post" class="center">
+				<div class="center" style="padding-right:0px">
+				<form action="delete.php" method="post">
 					<p style="font-size:18px;display: inline">Enter username to delete: </p>
 					<input type="text" name="dname"><br><br>
 					<button type="submit" name="del">Delete Customer</button>
 					<button type="submit" name="del2" onclick=myfunction()>Delete Technician</button>
 				</form>
+				</div>
 
 			</div>
 		</div>

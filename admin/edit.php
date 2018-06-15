@@ -5,19 +5,8 @@
 <?php
     include 'userheader.php';
 ?>
-<style>
-				button {
-				background-color: #333333; 
-				border: none;
-				color: white;
-				padding: 15px 80px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin: 20px 20px 15px 20px;
-				}
-				.center {
+		<style>
+			.center {
 				margin: auto ;
 				margin-top: 15px;
 				margin-bottom: 15px;
@@ -26,22 +15,11 @@
 				text-align: center;
 				border: 2px solid grey;
 				background-color: #c6cbd3;
-				}
-				button:hover {
-				  background-color: #111111;
-				color: white; }
-				.rest {
-				margin: auto ;
-				margin-top: 15px;
-				width: 60%;
-				padding: 10px 10px 10px 50px;
-				text-align: center;
-				background-color: #cbd1db;
-				}
-</style>
+			}
+		</style>
 		
 
-		<h1>Change User Info</h1>
+		<h1 style="text-align:center">Change User Details</h1>
 		<div class ="center">
 		<form method="post" action="edit.php">
 			Enter username: <input type="text" name="uname"><br><br>
@@ -106,15 +84,17 @@
 
 		<hr>
 
-		<form method="post" action="edit.php" class="center">
-			<h3>Enter details to edit:</h3> <br>
-			User Name: <input type="text" name="uname"/><br><br>
-			First Name: <input type="text" name="fname" value="" /><br><br>
-			Last Name: <input type="text" name="lname" value="" /><br><br>
-			Contact Number: <input type="text" name="cont" value="" /><br><br>
-			Email: <input type="text" name="email" value="" /><br><br>
-			City: 
-				<select name="city">
+		<form action="edit.php" method="post">
+			<div class="center" style="text-align:center">
+				<h3 style="text-align:center;">Enter Details to change</h3>
+				User Name: <input type="text" name="uname" value="" style="margin-left:50px" required/><br><br>
+				First Name: <input type="text" name="fname" value="" style="margin-left:50px" required/><br><br>
+				Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
+				Contact Number: <input type="text" name="cont" value="" required/><br><br>
+				Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
+				Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
+				City: 
+				<select name="city" style="margin-left:102px">
 						<option value="">Leave empty for a customer</option>
 						<option value="Colombo">Colombo</option>
 						<option value="Kalutara">Kalutara</option>
@@ -124,7 +104,7 @@
 						<option value="Kurunegala">Kurunegala</option>	
 					</select><br><br>
 				Occupation:
-				<select name="ocp">
+				<select name="ocp" style="margin-left:48px">
 					<option value="">Leave empty for a customer</option>
 					<option value="IT Technician">IT Technician</option>
 					<option value="Carpenter">Carpenter</option>
@@ -134,7 +114,7 @@
 					<option value="Welder">Welder</option>	
 				</select><br><br>
 				Skill:
-				<select name="skid">
+				<select name="skid" style="margin-left:100px">
 					<option value="">Leave empty for a customer</option>
 					<option value="Ittc001">PC Troubleshooting</option>
 					<option value="Ittc002">Virus Removing</option>
@@ -143,8 +123,11 @@
 					<option value="Mech001">Tinkering</option>
 					<option value="Carp001">Wood works</option>	
 				</select><br><br>
-			<button type="submit" name="edit">Change Customer</button>
-			<button type="submit" name="edit2">Change Technician</button><br><br><br>
+				
+				<button type="submit" name="edit" style="width:210px">Change Customer Details</button>
+				<button type="submit" name="edit2" style="width:210px">Change Technician Details</button>
+				
+			</div>
 		</form>
 
 		<footer>
