@@ -1,7 +1,7 @@
 <?php
-$server = "localhost";
+$server = "niwder.me";
 $username = "root";
-$password = "";
+$password = "srilanka";
 $dbname = "web";
 
 $conn = mysqli_connect($server,$username,$password,$dbname);
