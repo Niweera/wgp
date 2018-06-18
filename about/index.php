@@ -45,7 +45,7 @@
 		</div><!--wrapper-->
 		<footer>
 			<div class="footer" style="position:fixed">
-			<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<p class="footerleft" style="padding-top: 15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">
 				<a href="#home">Link 1</a>
 				<a href="#about">Link 2</a>
