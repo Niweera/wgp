@@ -1,8 +1,8 @@
 -- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for Win32 (AMD64)
 --
--- Host: localhost    Database: web
+-- Host: niwder.me    Database: web
 -- ------------------------------------------------------
--- Server version	10.1.26-MariaDB
+-- Server version	5.7.22
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -39,7 +39,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('amal','amal','perera','amm@gmail.com',184354168,'$2y$10$VXkJlJU8IHZAgTWRmkxOjOktTsPhr9K6BEZGCU2J0VG3HlXYAgYHm'),('Niweera','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.');
+INSERT INTO `customer` VALUES ('amal','amal','perera','amm@gmail.com',184354168,'$2y$10$VXkJlJU8IHZAgTWRmkxOjOktTsPhr9K6BEZGCU2J0VG3HlXYAgYHm'),('Namal','Amal','Silva','namml@gmai.com',76654132,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.'),('Niweera','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +146,7 @@ CREATE TABLE `techskill` (
 
 LOCK TABLES `techskill` WRITE;
 /*!40000 ALTER TABLE `techskill` DISABLE KEYS */;
-INSERT INTO `techskill` VALUES ('amal','Ittc001'),('amal','Ittc002'),('Kamal123','Carp001'),('Niweera','Ittc001'),('Niweera','Ittc002'),('Niweera22','Elec001');
+INSERT INTO `techskill` VALUES ('Kamal123','Carp001'),('Niweera22','Elec001'),('amal','Ittc001'),('Niweera','Ittc001'),('amal','Ittc002'),('Niweera','Ittc002');
 /*!40000 ALTER TABLE `techskill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -159,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-17 11:57:43
+-- Dump completed on 2018-06-19  0:14:09
