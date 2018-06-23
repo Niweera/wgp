@@ -29,43 +29,7 @@
 			</div>
 		</header>
 			<div class = "wrapper">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<div class = "top-bar clearfix">
-					<div class = "top-bar-links">
-						<ul>
-							<li><a href = "home.php">Home</a></li>
-							<li><a href = "facilities.php">Facilities</a></li>
-							<li><a href = "help.php">Help</a></li>
-							<li><a href = "about us.php">About Us</a></li>
-							<li><a href = "contact us.php">Contact Us</a></li>
-							<li><a href = "login.php">Sign In</a></li>
-						</ul>
-					</div><!--top-bar-links-->
-					<div class = "name">
-						<b><i>TechGuru</b></i>
-					</div><!--name-->
-				</div><!--top-bar-->
-				<header class = "clearfix">
-					<div class = "topic">
-							<b><u><h1>CONTACT SUPPORT</h1></b></u>
-					</div><!--topic-->
-				</header>
-				<nav>
-					<ul>
-						<li><a href = "contact us.php">Contact Us</a></li>
-						<li><a href = "contact support.php">Contact Support</a></li>
-					</ul>
-				</nav>
-=======
->>>>>>> eacdd830394e1ce91a8abcba9eb9af1be8b56c33
-=======
 				<!--edit from here-->
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
-=======
-				<!--edit from here-->
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 					<form>
 						<div class = "table-design">
 						<table align=center border= 1>
@@ -130,14 +94,7 @@
 					</table>
 						</div><!--table-design-->
 					</form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 				<!--end edit from here-->
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
-=======
-				<!--end edit from here-->
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 			</div><!--wrapper-->
 			<footer>
 				<div class="footer" style="position:fixed">
