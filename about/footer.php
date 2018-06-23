@@ -9,3 +9,4 @@
       <div style="clear: both;"></div>
     </div>
 </footer>
+<!--default footer-->
