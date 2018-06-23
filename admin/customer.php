@@ -8,7 +8,7 @@
             <a href="./">Home</a>
             <a href="./users.php">User Administration</a>
             <a class="active" href="./customer.php">Customers</a>
-            <a href="#services">Technicians</a>
+            <a href="./technician.php">Technicians</a>
             <a href="#help">Reports</a>
             <a href="#login">Log out</a>
         </div>
