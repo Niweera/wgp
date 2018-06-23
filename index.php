@@ -29,6 +29,7 @@
 				</div>
 			</div>
 	</header>
+	<!--this page will include company details of the Find Lanka-->
     <p> this is some sample text!</p>
     <p> this is some sample text!</p>
     <p> this is some sample text!</p>
