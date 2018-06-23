@@ -31,6 +31,7 @@
 			</div>
 		</header>
 			<div class = "wrapper">
+				<!--edit from here-->
 				<div class = "text1">
 				<h1 style="margin-top:5px">Our Story</h1>
 					<p>TechGuru has scaled similar heights with their services. Approach 2 million users spread out in over 10 countriec across the world. TechGuru has been in the forefront to tech support for last three years.</p>
@@ -42,6 +43,7 @@
 						<img src = "image/download.jpg" alt="Image">
 					</div><!--table-image2-->
 				</div><!--table1-->
+					<!--end edit from here-->
 			</div><!--wrapper-->
 			<br>
 			
