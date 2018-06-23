@@ -59,9 +59,10 @@
 		<?php
 if (isset($_POST['Search'])) {
 	$occupation=$_POST['radio'];
-if(isset($_POST['car']))
+if(isset($occupation) && $occupation=="car")
 
 {
+	
 	$sql = "SELECT TechID, FirstName, LastName, Email, ContactNo FROM technician WHERE Occupation='Carpenter';";
 						$result=mysqli_query($conn,$sql);
 						$queryResult=mysqli_num_rows($result);
