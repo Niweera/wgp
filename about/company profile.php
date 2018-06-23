@@ -39,7 +39,8 @@
 			<!--edit from here--><!--methanin edit karanna patan ganna-->
 			<div class = "text">
 				<h1 style="margin-top:5px">Company Profile</h1>
-				<ul type = "disc">						
+				<ul type = "disc">		
+					<!--me thiyena <b> <u> <i> tag dan pawichchi wenne ne ewa css walin thamay dan hadanne-->
 					<b><u><li>Our Purpose</li></u></b>
 						<h2><u>High levels customer satisfaction</u></h2>
 							<p>TechGuru offers incident based services for Home Solution, Business Solution and Enterprise Solution.
