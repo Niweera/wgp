@@ -29,6 +29,7 @@
 			</div>
 		</header>
 			<div class = "wrapper">
+				<!--edit from here-->
 				<div class = "table2">
 					<div class = "table-call">
 						<img src = "image/call.png" alt="Image">
@@ -134,6 +135,7 @@
 						<p><strong>Veitnam</strong><br>+691 2604 2600<br></p>
 					</div><!--table-txt-->
 				</div><!--table4-->
+			<!--end edit from here-->
 			</div><!--wrapper-->
 			<form>
 			<br><br>
