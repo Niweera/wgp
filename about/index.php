@@ -30,7 +30,7 @@
 			</div>
 		</header>
 
-
+		<!--edit from here-->
 		<div class = "wrapper">
 			<div class = "table">
 				<div class = "table-image">
@@ -43,6 +43,8 @@
 				</div><!--table-text-->
 			</div><!--table--> 
 		</div><!--wrapper-->
+		<!--end edit from here-->
+
 		<footer>
 			<div class="footer" style="position:fixed">
 			<p class="footerleft" style="padding-top: 15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
