@@ -36,7 +36,7 @@
 
 		<div class = "wrapper">
 			
-			<!--edit from here-->
+			<!--edit from here--><!--methanin edit karanna patan ganna-->
 			<div class = "text">
 				<h1 style="margin-top:5px">Company Profile</h1>
 				<ul type = "disc">						
@@ -57,7 +57,7 @@
 				</ul>
 			</div><!--text-->
 		</div><!--wrapper-->
-		<!--end edit from here-->
+		<!--end edit from here--><!--methanin nathara karanna-->
 		<div style="padding:400px">
 			<br><br>
 		</div>
