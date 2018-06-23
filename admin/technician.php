@@ -45,7 +45,7 @@
 				}
 
 </style>
-<!--the page views the customer database-->
+<!--the page views the technician database-->
 	    <!--ALSO THIS CODE CAN BE SIMPLIFIED-->
 		<h1 style="text-align:center;">Technician Database</h1>
 		<form action="newtech.php" method="post" class="center">
