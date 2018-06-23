@@ -32,6 +32,7 @@
 		</header>
 
 			<div class = "wrapper">
+				<!--edit from here-->
 				<h1 style="margin-top:5px">Leadership & Management</h1>
 				<div class = "table">
 					<h1><u>Leadership</u></h1>
@@ -49,6 +50,7 @@
 					</center>
 					<br>
 				</div>
+				<!--end edit from here-->
 			</div><!--wrapper-->
 			<footer>
 				<div class="footer" style="position:relative">
