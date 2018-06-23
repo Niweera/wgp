@@ -29,7 +29,7 @@
 			</div>
 		</header>
 			<div class = "wrapper">
-				<!--edit from here--><!--test comment-->
+				<!--edit from here-->
 					<form>
 						<div class = "table-design">
 						<table align=center border= 1>
