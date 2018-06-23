@@ -15,7 +15,7 @@
         </div>
     </div>
   </header>
-
+  <!--this is the admin's homepage this homepage should contain details of admin-->
   <p> this is some sample text!</p>
   <p> this is some sample text!</p>
   <p> this is some sample text!</p>

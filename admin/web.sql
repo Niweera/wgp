@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for Win32 (AMD64)
 --
--- Host: localhost    Database: web
+-- Host: niwder.me    Database: web
 -- ------------------------------------------------------
 -- Server version	10.1.26-MariaDB
 

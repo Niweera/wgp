@@ -30,7 +30,7 @@
 			}
 
 </style>
-
+<!--the page contain the links to other admin functions Create, Update and Delete-->
       	<div class ="center">
 			<h1>User Authentication</h1>
 			<a href="create.php"><button type="button">Create profile</button></a><br><br>

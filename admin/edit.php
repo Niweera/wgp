@@ -83,7 +83,7 @@
 		?>
 
 		<hr>
-
+			
 		<form action="edit.php" method="post">
 			<div class="center" style="text-align:center">
 				<h3 style="text-align:center;">Enter Details to change</h3>
@@ -94,6 +94,7 @@
 				Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
 				Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
 				City: 
+				<!--these kinds of select statements should be changed into php to auto populate-->
 				<select name="city" style="margin-left:102px">
 						<option value="">Leave empty for a customer</option>
 						<option value="Colombo">Colombo</option>

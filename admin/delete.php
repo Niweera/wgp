@@ -102,7 +102,7 @@
 
 			</div>
 		</div>
-
+		<!--sticky footer is a kind of footer to expand when needed otherwise it is a fixed footer-->
 		<footer class="stickyfooter">
 			<p class="footerleft" style="margin-top:0"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">

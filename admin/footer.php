@@ -9,3 +9,4 @@
       <div style="clear: both;"></div>
     </div>
 </footer>
+<!--this footer is to add as default footer to any page-->
