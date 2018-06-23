@@ -33,6 +33,7 @@
 			<div class = "wrapper">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<div class = "top-bar clearfix">
 					<div class = "top-bar-links">
 						<ul>
@@ -66,6 +67,9 @@
 =======
 				<!--edit from here-->
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+=======
+				<!--edit from here-->
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 				<div class = "text1">
 				<h1 style="margin-top:5px">Our Story</h1>
 					<p>TechGuru has scaled similar heights with their services. Approach 2 million users spread out in over 10 countriec across the world. TechGuru has been in the forefront to tech support for last three years.</p>
@@ -78,6 +82,10 @@
 					</div><!--table-image2-->
 				</div><!--table1-->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+					<!--end edit from here-->
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 =======
 					<!--end edit from here-->
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb

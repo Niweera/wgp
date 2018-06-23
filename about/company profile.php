@@ -2,6 +2,7 @@
     include 'header.php';
 ?> 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 			<header>
@@ -104,6 +105,9 @@
 	</html>
 =======
 
+=======
+
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 <div class="content">
 	<div class="content-inside" style="text-align:center">
 		<header>
@@ -177,4 +181,7 @@
 	</footer>
 	</body>
 </html>
+<<<<<<< HEAD
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+=======
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb

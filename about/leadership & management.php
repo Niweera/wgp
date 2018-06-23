@@ -34,6 +34,7 @@
 			<div class = "wrapper">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<div class = "top-bar clearfix">
 					<div class = "top-bar-links">
 						<ul>
@@ -69,6 +70,10 @@
 				<!--edit from here-->
 				<h1 style="margin-top:5px">Leadership & Management</h1>
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+=======
+				<!--edit from here-->
+				<h1 style="margin-top:5px">Leadership & Management</h1>
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 				<div class = "table">
 					<h1><u>Leadership</u></h1>
 						<div class = "table-image">
@@ -86,6 +91,10 @@
 					<br>
 				</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				<!--end edit from here-->
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 =======
 				<!--end edit from here-->
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb

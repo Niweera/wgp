@@ -31,6 +31,7 @@
 			<div class = "wrapper">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<div class = "top-bar clearfix">
 					<div class = "top-bar-links">
 						<ul>
@@ -59,6 +60,9 @@
 				</nav>
 =======
 >>>>>>> eacdd830394e1ce91a8abcba9eb9af1be8b56c33
+=======
+				<!--edit from here-->
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 =======
 				<!--edit from here-->
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
@@ -168,6 +172,10 @@
 					</div><!--table-txt-->
 				</div><!--table4-->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+			<!--end edit from here-->
+>>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
 =======
 			<!--end edit from here-->
 >>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
