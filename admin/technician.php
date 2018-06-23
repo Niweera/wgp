@@ -48,17 +48,17 @@
 <!--the page views the customer database-->
 	    <!--ALSO THIS CODE CAN BE SIMPLIFIED-->
 		<h1 style="text-align:center;">Technician Database</h1>
-		<form action="technician.php" method="post" class="center">
-			<input type="radio" name="radio" <?php if (isset($occupation) && $occupation=="car"); echo "checked";?> value="car" >Carpenter
-			<input type="radio" name="radio" <?php if (isset($occupation) && $occupation=="elec"); echo "checked";?> value="elec">Electrician
-			<input type="radio" name="radio" <?php if (isset($occupation) && $occupation=="it"); echo "checked";?> value="it">IT Technician
-			<input type="radio" name="radio" <?php if (isset($occupation) && $occupation=="all"); echo "checked";?> value="all">All
+		<form action="newtech.php" method="post" class="center">
+			<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="car") {echo "checked";}?> value="car" >Carpenter
+			<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="elec") {echo "checked";}?> value="elec">Electrician
+			<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="it") {echo "checked";}?> value="it">IT Technician
+			<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="all") {echo "checked";}?> value="all">All
 			<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:150px;"><br>
 		</form>
 
 		<?php
 if (isset($_POST['Search'])) {
-	$occupation=$_POST['radio'];
+	 $occupation=$_POST['radio']; 
 if(isset($occupation) && $occupation=="car")
 
 {
