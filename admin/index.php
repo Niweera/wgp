@@ -8,7 +8,7 @@
         <div class="rightnav">
           <a class="active" href="./">Home</a>
           <a href="./users.php">User Administration</a>
-          <a href="#contact">Customer Requests</a>
+          <a href="#contact">Customers</a>
           <a href="#services">Technicians</a>
           <a href="#help">Reports</a>
           <a href="#login">Log out</a>

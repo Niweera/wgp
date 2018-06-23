@@ -12,4 +12,4 @@
     </div>
 </header>
 
-<!--user header_ specially created for the admin-->
+<!--user header_ specially created for the user administration page header-->
