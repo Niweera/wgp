@@ -6,19 +6,17 @@
     include 'userheader.php';
 ?>
 
-		
-
 		<form action="create.php" method="post">
-			<div class="center">
-				<h1>Registration Details</h1>
-				User Name: <input type="text" name="uname" value="" required/><br><br>
-				First Name: <input type="text" name="fname" value="" required/><br><br>
-				Last Name: <input type="text" name="lname" value="" required/><br><br>
+			<div class="center" style="text-align:center">
+				<h1 style="text-align:center;">Registration Details</h1>
+				User Name: <input type="text" name="uname" value="" style="margin-left:50px" required/><br><br>
+				First Name: <input type="text" name="fname" value="" style="margin-left:50px" required/><br><br>
+				Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
 				Contact Number: <input type="text" name="cont" value="" required/><br><br>
-				Email: <input type="text" name="email" value="" required/><br><br>
-				Password: <input type="password" name="pw" value="" required/><br><br>
+				Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
+				Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
 				City: 
-				<select name="city">
+				<select name="city" style="margin-left:102px">
 						<option value="">Leave empty for a customer</option>
 						<option value="Colombo">Colombo</option>
 						<option value="Kalutara">Kalutara</option>
@@ -28,7 +26,7 @@
 						<option value="Kurunegala">Kurunegala</option>	
 					</select><br><br>
 				Occupation:
-				<select name="ocp">
+				<select name="ocp" style="margin-left:48px">
 					<option value="">Leave empty for a customer</option>
 					<option value="IT Technician">IT Technician</option>
 					<option value="Carpenter">Carpenter</option>
@@ -38,7 +36,7 @@
 					<option value="Welder">Welder</option>	
 				</select><br><br>
 				Skill:
-				<select name="skid">
+				<select name="skid" style="margin-left:100px">
 					<option value="">Leave empty for a customer</option>
 					<option value="Ittc001">PC Troubleshooting</option>
 					<option value="Ittc002">Virus Removing</option>
@@ -47,13 +45,15 @@
 					<option value="Mech001">Tinkering</option>
 					<option value="Carp001">Wood works</option>	
 				</select><br><br>
-				<button type="submit" name="submit" class="center">Create Customer Account</button>
-				<button type="submit" name="submit2" class="center">Create Technician Account</button>
+				
+				<button type="submit" name="submit" style="width:210px">Create Customer Account</button>
+				<button type="submit" name="submit2" style="width:210px">Create Technician Account</button>
+				
 			</div>
 		</form>
 
 		<footer>
-		<div class="footer" style="position:fixed">
+		<div class="footer" style="position:relative">
 		<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 		<div class="footerright">
 			<a href="#home">Link 1</a>

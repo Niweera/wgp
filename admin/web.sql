@@ -1,8 +1,8 @@
 -- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for Win32 (AMD64)
 --
--- Host: niwder.me    Database: web
+-- Host: localhost    Database: web
 -- ------------------------------------------------------
--- Server version	5.7.22
+-- Server version	10.1.26-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -39,11 +39,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `customer` VALUES ('amal','amal','perera','amm@gmail.com',184354168,'$2y$10$VXkJlJU8IHZAgTWRmkxOjOktTsPhr9K6BEZGCU2J0VG3HlXYAgYHm'),('Niweera','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.');
-=======
-INSERT INTO `customer` VALUES ('amal','amal','perera','amm@gmail.com',184354168,'$2y$10$VXkJlJU8IHZAgTWRmkxOjOktTsPhr9K6BEZGCU2J0VG3HlXYAgYHm'),('Namal','Amal','Silva','namml@gmai.com',76654132,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.'),('Niweera','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.');
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+INSERT INTO `customer` VALUES ('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$27/5UsmJ/PHdUH6fdcQhI.4KaSbzW1heCkxF4kuC709Dgv/7C5q8.');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +119,7 @@ CREATE TABLE `technician` (
 
 LOCK TABLES `technician` WRITE;
 /*!40000 ALTER TABLE `technician` DISABLE KEYS */;
-INSERT INTO `technician` VALUES ('amal','Amal','Perera','sdfdsfdaf',531313,'$2y$10$bzOKO8fWziOJrOGVXPypHujCMrM.omDk.7zdAXh0K5y4zfb5dkT1m','IT Technician','Colombo'),('Kamal123','Kamala','Perera','kmk@gmail.com',751234567,'$2y$10$O1N1.VUAU60MwKAf9P5nFuR1mF0e4SKsYq6fhy2bK5yUrpgIoRhqK','IT Technician','Galle'),('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$YHNmkjwGti6TrIXHWcV7lukwIr4yiMgDOX0bbXDw6wnNGRWniMOAG','IT Technician','Kalutara'),('Niweera22','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$BGuv1OqbulCyCoxMezDhOuyi68gGO2FWmxHk//KYOD5SvNFBeiwG2','Electrician','Galle');
+INSERT INTO `technician` VALUES ('Kamal123','Kamal','Perera','kmk@gmail.com',751234567,'$2y$10$O1N1.VUAU60MwKAf9P5nFuR1mF0e4SKsYq6fhy2bK5yUrpgIoRhqK','Carpenter','Colombo'),('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$YHNmkjwGti6TrIXHWcV7lukwIr4yiMgDOX0bbXDw6wnNGRWniMOAG','IT Technician','Kalutara'),('Niweera2','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$vuqB232aQJpbn4lzLg5IUO4uYes8mZ.86oA2DXNqWSvPHshjX3/S2','Carpenter','Colombo'),('Niweera22','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$BGuv1OqbulCyCoxMezDhOuyi68gGO2FWmxHk//KYOD5SvNFBeiwG2','Electrician','Galle'),('Niweera222','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$nTGVWb1ohJVDz3pfsJz8LOvIhSQPImZ8Bw.0YhjCFVOd4A8s1HM8C','IT Technician','Kalutara');
 /*!40000 ALTER TABLE `technician` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +136,7 @@ CREATE TABLE `techskill` (
   PRIMARY KEY (`TechID`,`SkID`),
   KEY `techrel` (`SkID`),
   CONSTRAINT `techrel` FOREIGN KEY (`SkID`) REFERENCES `skill` (`SkID`),
-  CONSTRAINT `techrel2` FOREIGN KEY (`TechID`) REFERENCES `technician` (`TechID`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `techrel2` FOREIGN KEY (`TechID`) REFERENCES `technician` (`TechID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,11 +146,7 @@ CREATE TABLE `techskill` (
 
 LOCK TABLES `techskill` WRITE;
 /*!40000 ALTER TABLE `techskill` DISABLE KEYS */;
-<<<<<<< HEAD
-INSERT INTO `techskill` VALUES ('amal','Ittc001'),('amal','Ittc002'),('Kamal123','Carp001'),('Niweera','Ittc001'),('Niweera','Ittc002'),('Niweera22','Elec001');
-=======
-INSERT INTO `techskill` VALUES ('Kamal123','Carp001'),('Niweera22','Elec001'),('amal','Ittc001'),('Niweera','Ittc001'),('amal','Ittc002'),('Niweera','Ittc002');
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+INSERT INTO `techskill` VALUES ('Kamal123','Carp001'),('Niweera','Ittc001'),('Niweera','Ittc002'),('Niweera2','Carp001'),('Niweera22','Elec001'),('Niweera222','Ittc001');
 /*!40000 ALTER TABLE `techskill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -167,8 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2018-06-17 11:57:43
-=======
--- Dump completed on 2018-06-19  0:14:09
->>>>>>> cc5325af6f91c0da1c1f70878733a220b489cecb
+-- Dump completed on 2018-06-05  0:50:52

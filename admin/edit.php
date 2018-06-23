@@ -5,14 +5,28 @@
 <?php
     include 'userheader.php';
 ?>
+		<style>
+			.center {
+				margin: auto ;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				width: 50%;
+				padding: 10px;
+				text-align: center;
+				border: 2px solid grey;
+				background-color: #c6cbd3;
+			}
+		</style>
 		
 
-		<h1>Change User Info</h1>
+		<h1 style="text-align:center">Change User Details</h1>
+		<div class ="center">
 		<form method="post" action="edit.php">
 			Enter username: <input type="text" name="uname"><br><br>
 			<button type="submit" name="sub">Search Customer</button>
-			<button type="submit" name="sub2">Search Technician</button><br><br>
+			<button type="submit" name="sub2">Search Technician</button><br>
 		</form>
+		</div>
 		<?php
 			if (null !==(filter_input(INPUT_POST, 'sub'))){
 					$uname=mysqli_real_escape_string($conn,filter_input(INPUT_POST, 'uname'));
@@ -20,7 +34,8 @@
 					$result=mysqli_query($conn,$sql);
 					$queryResult=mysqli_num_rows($result);
 					if ($queryResult > 0){
-						echo "<br/><p style=\"font-size:18px;display: inline\">User is available</p><br/><br/>";
+						echo "<p style=\"font-size:18px;text-align:center\">User is available</p>";
+						echo "<div class=\"rest\">";
 						echo "<table style=\"width:100%\">";
 						echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th></tr>";
 						while ($row=mysqli_fetch_assoc($result)){
@@ -32,8 +47,9 @@
 							echo "<tr><td>".$uname."</td><td>".$fname."</td><td>".$lname."</td><td>".$cont."</td><td>".$email."</td></tr>";    
 							}
 						echo "</table>";
+						echo "</div>";
 					}else {
-						echo "User not available";
+						echo "<p style=\"text-align:center\">User not available</p>";
 					}
 				}
 
@@ -43,7 +59,8 @@
 				$result=mysqli_query($conn,$sql);
 				$queryResult=mysqli_num_rows($result);
 				if ($queryResult > 0){
-					echo "<br/><p style=\"font-size:18px;display: inline\">User is available</p><br/><br/>";
+					echo "<p style=\"font-size:18px;text-align:center\">User is available</p>";
+					echo "<div class=\"rest\">";
 					echo "<table style=\"width:100%\">";
 					echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th><th>Occupation</th><th>City</th></tr>";
 					while ($row=mysqli_fetch_assoc($result)){
@@ -57,24 +74,27 @@
 						echo "<tr><td>".$uname."</td><td>".$fname."</td><td>".$lname."</td><td>".$cont."</td><td>".$email."</td><td>".$ocp."</td><td>".$city."</td></tr>";    
 					}
 					echo "</table>";
+					echo "</div>";
 					
 				}else {
-					echo "User not available";
+					echo "<p style=\"text-align:center\">User not available</p>";
 				}
 			}
 		?>
 
 		<hr>
 
-		<form method="post" action="edit.php">
-			<h3>Enter details to edit:</h3> <br>
-			User Name: <input type="text" name="uname"/><br><br>
-			First Name: <input type="text" name="fname" value="" /><br><br>
-			Last Name: <input type="text" name="lname" value="" /><br><br>
-			Contact Number: <input type="text" name="cont" value="" /><br><br>
-			Email: <input type="text" name="email" value="" /><br><br>
-			City: 
-				<select name="city">
+		<form action="edit.php" method="post">
+			<div class="center" style="text-align:center">
+				<h3 style="text-align:center;">Enter Details to change</h3>
+				User Name: <input type="text" name="uname" value="" style="margin-left:50px" required/><br><br>
+				First Name: <input type="text" name="fname" value="" style="margin-left:50px" required/><br><br>
+				Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
+				Contact Number: <input type="text" name="cont" value="" required/><br><br>
+				Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
+				Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
+				City: 
+				<select name="city" style="margin-left:102px">
 						<option value="">Leave empty for a customer</option>
 						<option value="Colombo">Colombo</option>
 						<option value="Kalutara">Kalutara</option>
@@ -84,7 +104,7 @@
 						<option value="Kurunegala">Kurunegala</option>	
 					</select><br><br>
 				Occupation:
-				<select name="ocp">
+				<select name="ocp" style="margin-left:48px">
 					<option value="">Leave empty for a customer</option>
 					<option value="IT Technician">IT Technician</option>
 					<option value="Carpenter">Carpenter</option>
@@ -94,7 +114,7 @@
 					<option value="Welder">Welder</option>	
 				</select><br><br>
 				Skill:
-				<select name="skid">
+				<select name="skid" style="margin-left:100px">
 					<option value="">Leave empty for a customer</option>
 					<option value="Ittc001">PC Troubleshooting</option>
 					<option value="Ittc002">Virus Removing</option>
@@ -103,8 +123,11 @@
 					<option value="Mech001">Tinkering</option>
 					<option value="Carp001">Wood works</option>	
 				</select><br><br>
-			<button type="submit" name="edit">Change Customer</button>
-			<button type="submit" name="edit2">Change Technician</button><br><br><br>
+				
+				<button type="submit" name="edit" style="width:210px">Change Customer Details</button>
+				<button type="submit" name="edit2" style="width:210px">Change Technician Details</button>
+				
+			</div>
 		</form>
 
 		<footer>
