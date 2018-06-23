@@ -46,6 +46,8 @@
 
 </style>
 <!--the page views the customer database-->
+		<!-- THIS CODE GENERATE THE ERROR (Notice: Undefined index: radio in C:\xampp\htdocs\wgp\admin\technician.php on line 50) -->
+	    <!--ALSO THIS CODE CAN BE SIMPLIFIED-->
 		<h1 style="text-align:center;">Technician Database</h1>
 		<?php $occupation=$_POST['radio']; ?>
 		<form action="technician.php" method="post" class="center">
