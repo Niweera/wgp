@@ -5,7 +5,7 @@
 <?php
     include 'userheader.php';
 ?>
-
+		<!--this form should be broken into two forms, since it is bad practice to add two kinds of users in one form-->
 		<form action="create.php" method="post">
 			<div class="center" style="text-align:center">
 				<h1 style="text-align:center;">Registration Details</h1>
