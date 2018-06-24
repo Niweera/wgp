@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `city`
+--
+
+DROP TABLE IF EXISTS `city`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `city` (
+  `cityname` varchar(255) NOT NULL,
+  PRIMARY KEY (`cityname`),
+  UNIQUE KEY `cityname` (`cityname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `city`
+--
+
+LOCK TABLES `city` WRITE;
+/*!40000 ALTER TABLE `city` DISABLE KEYS */;
+INSERT INTO `city` VALUES ('Anuradhapura'),('Colombo'),('Galle'),('Gampaha'),('Hambantota'),('Kalutara'),('Kandy'),('Kurunegala'),('Matara'),('Ratnapura');
+/*!40000 ALTER TABLE `city` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `customer`
 --
 
@@ -89,7 +113,7 @@ CREATE TABLE `skill` (
 
 LOCK TABLES `skill` WRITE;
 /*!40000 ALTER TABLE `skill` DISABLE KEYS */;
-INSERT INTO `skill` VALUES ('Carp001','Wood works'),('Elec001','Wiring'),('Ittc001','PC Troubleshooting'),('Ittc002','Virus Removing'),('Mech001','Tinkering'),('Plum001','Pipelining');
+INSERT INTO `skill` VALUES ('Carp001','Wood works'),('Elec001','Wiring'),('Ittc001','PC Troubleshooting'),('Ittc002','Virus Removing'),('Mech001','Tinkering'),('Plum001','Pipelining'),('Plum002','Pipefitting');
 /*!40000 ALTER TABLE `skill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,16 +125,20 @@ DROP TABLE IF EXISTS `technician`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `technician` (
-  `TechID` varchar(255) NOT NULL,
-  `FirstName` varchar(255) NOT NULL,
-  `LastName` varchar(255) DEFAULT NULL,
-  `Email` varchar(255) DEFAULT NULL,
+  `TechID` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `FirstName` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `LastName` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
+  `Email` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
   `ContactNo` int(11) DEFAULT NULL,
-  `Password` varchar(255) NOT NULL,
+  `Password` varchar(255) CHARACTER SET latin1 NOT NULL,
   `Occupation` varchar(255) NOT NULL,
   `City` varchar(255) NOT NULL,
-  PRIMARY KEY (`TechID`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`TechID`) USING BTREE,
+  KEY `cityfk` (`City`),
+  KEY `ocpfk` (`Occupation`),
+  CONSTRAINT `cityfk` FOREIGN KEY (`City`) REFERENCES `city` (`cityname`),
+  CONSTRAINT `ocpfk` FOREIGN KEY (`Occupation`) REFERENCES `techtype` (`typename`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +147,7 @@ CREATE TABLE `technician` (
 
 LOCK TABLES `technician` WRITE;
 /*!40000 ALTER TABLE `technician` DISABLE KEYS */;
-INSERT INTO `technician` VALUES ('amal','Amal','Perera','sdfdsfdaf',531313,'$2y$10$bzOKO8fWziOJrOGVXPypHujCMrM.omDk.7zdAXh0K5y4zfb5dkT1m','IT Technician','Colombo'),('Kamal123','Kamala','Perera','kmk@gmail.com',751234567,'$2y$10$O1N1.VUAU60MwKAf9P5nFuR1mF0e4SKsYq6fhy2bK5yUrpgIoRhqK','IT Technician','Galle'),('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$YHNmkjwGti6TrIXHWcV7lukwIr4yiMgDOX0bbXDw6wnNGRWniMOAG','IT Technician','Kalutara'),('Niweera22','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$BGuv1OqbulCyCoxMezDhOuyi68gGO2FWmxHk//KYOD5SvNFBeiwG2','Electrician','Galle');
+INSERT INTO `technician` VALUES ('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$eg.dbZlp0pnINjt6clIBLuE2DdE/vJYOWzfa3O7L0vjH5agP64DXG','IT Technician','Kalutara'),('Niweera22','Nipuna','Weerasekara','nipuna@gmail.com',766419485,'$2y$10$FjEhX.rlE8R10L8vljG3BeyHGSTxXAziiCgWEdeFLaMwMnUS/FA2.','Electrician','Colombo'),('Niweera222','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$LlHB8QpGTfIF8XHPgcbx2Oum2xGhySmAu9KbymEE1a.vU4oie/f2C','Plumber','Galle');
 /*!40000 ALTER TABLE `technician` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,8 +174,33 @@ CREATE TABLE `techskill` (
 
 LOCK TABLES `techskill` WRITE;
 /*!40000 ALTER TABLE `techskill` DISABLE KEYS */;
-INSERT INTO `techskill` VALUES ('Kamal123','Carp001'),('Niweera22','Elec001'),('amal','Ittc001'),('Niweera','Ittc001'),('amal','Ittc002'),('Niweera','Ittc002');
+INSERT INTO `techskill` VALUES ('Niweera22','Elec001'),('Niweera','Ittc001'),('Niweera222','Plum002');
 /*!40000 ALTER TABLE `techskill` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `techtype`
+--
+
+DROP TABLE IF EXISTS `techtype`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `techtype` (
+  `typeid` varchar(100) NOT NULL,
+  `typename` varchar(255) NOT NULL,
+  PRIMARY KEY (`typeid`),
+  UNIQUE KEY `typename` (`typename`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `techtype`
+--
+
+LOCK TABLES `techtype` WRITE;
+/*!40000 ALTER TABLE `techtype` DISABLE KEYS */;
+INSERT INTO `techtype` VALUES ('Carp','Carpenter'),('Elec','Electrician'),('Ittc','IT Technician'),('Mech','Mechanic'),('Plum','Plumber');
+/*!40000 ALTER TABLE `techtype` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -159,4 +212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-19  0:14:09
+-- Dump completed on 2018-06-25  0:09:54
