@@ -95,35 +95,42 @@
 				Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
 				City: 
 				<!--these kinds of select statements should be changed into php to auto populate-->
-				<select name="city" style="margin-left:102px">
-						<option value="">Leave empty for a customer</option>
-						<option value="Colombo">Colombo</option>
-						<option value="Kalutara">Kalutara</option>
-						<option value="Galle">Galle</option>
-						<option value="Matara">Matara</option>
-						<option value="Kandy">Kandy</option>
-						<option value="Kurunegala">Kurunegala</option>	
-					</select><br><br>
+				<?php 
+					$result = $conn->query("select cityname from city");	
+					echo "<select name=\"city\" style=\"margin-left:102px\">";
+					echo '<option value="">Leave empty for a customer</option>';
+					while ($row = $result->fetch_assoc()) {
+						unset($id, $name);
+						$name = $row['cityname']; 
+						echo '<option value="'.$name.'">'.$name.'</option>'; 
+					}
+					echo "</select><br><br>";
+				?>
 				Occupation:
-				<select name="ocp" style="margin-left:48px">
-					<option value="">Leave empty for a customer</option>
-					<option value="IT Technician">IT Technician</option>
-					<option value="Carpenter">Carpenter</option>
-					<option value="Electrician">Electrician</option>
-					<option value="Mechanic">Mechanic</option>
-					<option value="Plumber">Plumber</option>
-					<option value="Welder">Welder</option>	
-				</select><br><br>
+				<?php 
+					$result = $conn->query("select typename from techtype");	
+					echo "<select name=\"ocp\" style=\"margin-left:48px\">";
+					echo '<option value="">Leave empty for a customer</option>';
+					while ($row = $result->fetch_assoc()) {
+						unset($id, $name);
+						$name = $row['typename']; 
+						echo '<option value="'.$name.'">'.$name.'</option>'; 
+					}
+					echo "</select><br><br>";
+				?>
 				Skill:
-				<select name="skid" style="margin-left:100px">
-					<option value="">Leave empty for a customer</option>
-					<option value="Ittc001">PC Troubleshooting</option>
-					<option value="Ittc002">Virus Removing</option>
-					<option value="Elec001">Wiring</option>
-					<option value="Plum001">Pipelining</option>
-					<option value="Mech001">Tinkering</option>
-					<option value="Carp001">Wood works</option>	
-				</select><br><br>
+				<?php 
+					$result = $conn->query("select SkID, SkillName from skill");	
+					echo "<select name=\"skid\" style=\"margin-left:100px\">";
+					echo '<option value="">Leave empty for a customer</option>';
+					while ($row = $result->fetch_assoc()) {
+						unset($id, $name);
+						$id = $row['SkID'];
+						$name = $row['SkillName']; 
+						echo '<option value="'.$id.'">'.$name.'</option>'; 
+					}
+					echo "</select><br><br>";
+				?>
 				
 				<button type="submit" name="edit" style="width:210px">Change Customer Details</button>
 				<button type="submit" name="edit2" style="width:210px">Change Technician Details</button>
