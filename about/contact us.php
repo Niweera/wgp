@@ -133,16 +133,17 @@
 						<p><strong>Hong Kong</strong><br>+542 6223 6424<br></p>
 						<p><strong>Japan</strong><br>+813 2401 3401<br></p>
 						<p><strong>Veitnam</strong><br>+691 2604 2600<br></p>
+						<br>
+						<br>
+						<br>
 					</div><!--table-txt-->
 				</div><!--table4-->
 			<!--end edit from here-->
 			</div><!--wrapper-->
-			<form>
-			<br><br>
-			</form>
+			
 			<footer>
 				<div class="footer" style="position:fixed">
-				<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+				<p class="footerleft" style="padding-top:15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 				<div class="footerright">
 					<a href="#home">Link 1</a>
 					<a href="#about">Link 2</a>

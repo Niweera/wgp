@@ -2,7 +2,8 @@
     include 'header.php';
 ?> 
 
-
+<div class="content">
+	<div class="content-inside" style="text-align:center">
 			<header>
 			<div class="navbar">
 				<a href="../" class="logo">FIND LANKA</a>
@@ -46,18 +47,21 @@
 					<!--end edit from here-->
 			</div><!--wrapper-->
 			<br>
+			<div style="padding:400px">
+			<br><br>
+		</div>
+		</div>
+		</div>	
 			
-			<footer>
-				<div class="footer" style="position:fixed">
-				<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
-				<div class="footerright">
-					<a href="#home">Link 1</a>
-					<a href="#about">Link 2</a>
-					<a href="#contact">Link 2</a>
-				</div>
-				<div style="clear: both;"></div>
-				</div>
-			</footer>
+		<footer class="stickyfooter">
+		<p class="footerleft" style="margin-top:0"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+		<div class="footerright">
+			<a href="#home">Link 1</a>
+			<a href="#about">Link 2</a>
+			<a href="#contact">Link 2</a>
+		</div>
+		<div style="clear: both"></div>
+	</footer>
 		</body>
 	</html>
 		

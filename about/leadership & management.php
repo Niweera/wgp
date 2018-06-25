@@ -34,9 +34,9 @@
 			<div class = "wrapper">
 				<!--edit from here-->
 				<h1 style="margin-top:5px">Leadership & Management</h1>
-				<div class = "table">
+				<div class = "table" style="width:1200px">
 					<h1><u>Leadership</u></h1>
-						<div class = "table-image">
+						<div class = "table-image" style="width:500px">
 							<img src = "image/images (2).jpg" alt="Image">
 						</div><!--table-image-->
 						<div class = "'table-text">
@@ -54,7 +54,7 @@
 			</div><!--wrapper-->
 			<footer>
 				<div class="footer" style="position:relative">
-				<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+				<p class="footerleft" style="padding-top: 15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 				<div class="footerright">
 					<a href="#home">Link 1</a>
 					<a href="#about">Link 2</a>
