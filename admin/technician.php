@@ -52,16 +52,47 @@
 
 				<h1 style="text-align:center;">Technician Database</h1>
 				<form action="technician.php" method="post" class="center">
-					<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="Carpenter") {echo "checked";}?> value="Carpenter" >Carpenter
-					<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="Electrician") {echo "checked";}?> value="Electrician">Electrician
-					<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="IT technician") {echo "checked";}?> value="IT technician">IT Technician
-					<input type="radio" name="radio" <?php if (isset($_POST['radio']) && ($_POST['radio'])=="all") {echo "checked";}?> value="all">All
-					<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:150px;"><br>
+				<?php /*
+					$result = $conn->query("select typeid, typename from techtype");	
+					//echo "<select name=\"skid\" style=\"margin-left:100px\">";
+					//echo '<option value="">Leave empty for a customer</option>';
+					while ($row = $result->fetch_assoc()) {
+						unset($id, $name);
+						$id = $row['typeid'];
+						$name = $row['typename']; 
+						//echo '<option value="'.$id.'">'.$name.'</option>'; 
+						echo '<input type="radio" name="radio" value='.$name.'>'.$name.'';
+						if (isset($_POST['radio']) && ($_POST['radio'])==".$name.") {echo "checked";}
+					}
+					echo "</select><br><br>";*/
+				?>
+
+				Select Technician Type:
+				<?php 
+					$result = $conn->query("select typeid, typename from techtype");	
+					echo "<select name=\"ocp\" style=\"margin-left:100px\">";
+					echo '<option value="all">Select all Technician Types</option>';
+					while ($row = $result->fetch_assoc()) {
+						unset($id, $name);
+						//$id = $row['typeid'];
+						$name = $row['typename']; 
+						echo '<option value="'.$name.'">'.$name.'</option>'; 
+					}
+					echo "</select><br><br>";
+				?>
+				
+				<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:262px;"><br>
+				
+				<!--<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="Carpenter") {echo "checked";}?> value="Carpenter" >Carpenter
+					<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="Electrician") {echo "checked";}?> value="Electrician">Electrician
+					<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="IT technician") {echo "checked";}?> value="IT technician">IT Technician
+					<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="all") {echo "checked";}?> value="all">All
+					<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:150px;"><br>-->
 				</form>
 
 				<?php
 					if (isset($_POST['Search'])) {
-						$occupation=$_POST['radio'];
+						$occupation=$_POST['ocp'];
 						if ($occupation == "all") {
 							$sql = "SELECT TechID, FirstName, LastName, Email, ContactNo, Occupation FROM technician;";
 							$result=mysqli_query($conn,$sql);
@@ -81,7 +112,9 @@
 								echo "</table>";
 								echo "<br>";
 							}
-						}else{
+						}
+						
+						else{
 							$sql = "SELECT TechID, FirstName, LastName, Email, ContactNo FROM technician WHERE Occupation='$occupation';";
 							$result=mysqli_query($conn,$sql);
 							$queryResult=mysqli_num_rows($result);
@@ -101,6 +134,7 @@
 							}
 						}
 					}
+
 				?>
 			</div>
 		</div>
