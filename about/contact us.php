@@ -22,9 +22,9 @@
 							<a href="contact support.php">Contact Support</a>
 						</div>
 					</div> 
-					<a href="#services">Services</a>
-					<a href="#help">Help</a>
-					<a href="#login">Log in</a>
+					<a href="../services">Services</a>
+					<a href="../help">Help</a>
+					<a href="../login">Log in</a>
 				</div>
 			</div>
 		</header>
