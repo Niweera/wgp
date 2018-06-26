@@ -31,7 +31,7 @@
 		</header>
 			<div class = "wrapper">
 				<!--edit from here-->
-					<form>
+					<form action = "contact support.php" method = "post">
 						<div class = "table-design">
 						<table align=center border= 1>
 						<tr>
@@ -40,56 +40,32 @@
 						</tr>
 						<tr>
 							<td>Your Name  *</td>
-							<td><input type="text" size="100" maxlength="40" placeholder = "Name"></td>
+							<td><input type="text" size="100" maxlength="40" placeholder = "Name" required></td>
 						</tr>
 						<tr>
 							<td>Email Address *</td>
-							<td><input type="email" name = "useemail" placeholder = "Email"></td>
+							<td><input type="email" name = "useemail" placeholder = "Email" required></td>
 						</tr>
 						<tr>
 							<td>Subject  *</td>
-							<td>
-								<select>
-									<option></option>
-									<option>Home Solution</option>
-									<option>Business Solution</option>
-									<option>Enterprise Solution</option>
-									<option>Other Services</option>
-								</select>
-							</td>
+							<td><input type="subject" name = "subject" placeholder = "Subject" required></td>
 						</tr>
+						
 						<tr>
-							<td>If Other Services</td>
+							<td>Note*</td>
 							<td>
-								<select>
-									<option></option>
-									<option>Optimization</option>
-									<option>Diagnosis & Repair</option>
-									<option>Setup & Install</option>
-									<option>Virus Removal</option>
-									<option>Usability Training</option>
-									<option>Networking</option>
-									<option>Manage services</option>
-									<option>Other Services</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td><Note</td>
-							<td>
-								<textarea name="message" rows="10" cols="50">
-								Please write your note here
+								<textarea name="message" rows="10" cols="100" required>
 								</textarea>
 							</td>
 						</tr>
 						<tr>
 							<td colspan=2 align="center">
-							<form action = "admin page.php" method = "post">
+							
 							<div class = "button">
-								<input type=submit value=submit>
-								<input type=reset value=cancel>
+								<input type=submit value=Submit name="submit"> 
+								<input type=reset value=Cancel>
 							</div><!--button-->
-							</form>
+							
 							</td>
 						</tr>
 					</table>
@@ -111,4 +87,10 @@
 		</body>
 	</html>
 		
-					
+
+<?php
+	if (null !==(filter_input(INPUT_POST, 'submit'))){
+		//write the php code here to send the message to the db 
+		//the info will be read by the admin by retrieving from the db
+	}				
+?>
