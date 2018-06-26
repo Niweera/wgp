@@ -47,7 +47,7 @@ DROP TABLE IF EXISTS `customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `customer` (
-  `CustID` varchar(255) NOT NULL,
+  `CustID` int(255) NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
@@ -63,34 +63,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('amal','amal','perera','amm@gmail.com',184354168,'$2y$10$VXkJlJU8IHZAgTWRmkxOjOktTsPhr9K6BEZGCU2J0VG3HlXYAgYHm'),('Namal','Amal','Silva','namml@gmai.com',76654132,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.'),('Niweera','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$Jbh4mhAEOsKgka5yFEOjBe1rR8qhlNLdQAOBmLpkSmcnKrccFpk4.');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `customerissue`
---
-
-DROP TABLE IF EXISTS `customerissue`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `customerissue` (
-  `CustID` varchar(255) NOT NULL,
-  `IssueID` varchar(255) NOT NULL,
-  PRIMARY KEY (`CustID`,`IssueID`),
-  KEY `custrel2` (`IssueID`),
-  CONSTRAINT `custrel` FOREIGN KEY (`CustID`) REFERENCES `customer` (`CustID`),
-  CONSTRAINT `custrel2` FOREIGN KEY (`IssueID`) REFERENCES `skill` (`SkID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `customerissue`
---
-
-LOCK TABLES `customerissue` WRITE;
-/*!40000 ALTER TABLE `customerissue` DISABLE KEYS */;
-/*!40000 ALTER TABLE `customerissue` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -147,7 +120,7 @@ CREATE TABLE `technician` (
 
 LOCK TABLES `technician` WRITE;
 /*!40000 ALTER TABLE `technician` DISABLE KEYS */;
-INSERT INTO `technician` VALUES ('Niweera','W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$eg.dbZlp0pnINjt6clIBLuE2DdE/vJYOWzfa3O7L0vjH5agP64DXG','IT Technician','Kalutara'),('Niweera22','Nipuna','Weerasekara','nipuna@gmail.com',766419485,'$2y$10$FjEhX.rlE8R10L8vljG3BeyHGSTxXAziiCgWEdeFLaMwMnUS/FA2.','Electrician','Colombo'),('Niweera222','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$LlHB8QpGTfIF8XHPgcbx2Oum2xGhySmAu9KbymEE1a.vU4oie/f2C','Plumber','Galle');
+INSERT INTO `technician` VALUES ('Niweera','Nipuna Lakshitha ','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$eg.dbZlp0pnINjt6clIBLuE2DdE/vJYOWzfa3O7L0vjH5agP64DXG','Electrician','Kalutara'),('Niweera22','Nipuna','Weerasekara','nipuna@gmail.com',766419485,'$2y$10$FjEhX.rlE8R10L8vljG3BeyHGSTxXAziiCgWEdeFLaMwMnUS/FA2.','Electrician','Colombo'),('Niweera222','Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$LlHB8QpGTfIF8XHPgcbx2Oum2xGhySmAu9KbymEE1a.vU4oie/f2C','Plumber','Galle');
 /*!40000 ALTER TABLE `technician` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -174,7 +147,7 @@ CREATE TABLE `techskill` (
 
 LOCK TABLES `techskill` WRITE;
 /*!40000 ALTER TABLE `techskill` DISABLE KEYS */;
-INSERT INTO `techskill` VALUES ('Niweera22','Elec001'),('Niweera','Ittc001'),('Niweera222','Plum002');
+INSERT INTO `techskill` VALUES ('Niweera','Elec001'),('Niweera22','Elec001'),('Niweera','Ittc001'),('Niweera222','Plum002');
 /*!40000 ALTER TABLE `techskill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,7 +172,7 @@ CREATE TABLE `techtype` (
 
 LOCK TABLES `techtype` WRITE;
 /*!40000 ALTER TABLE `techtype` DISABLE KEYS */;
-INSERT INTO `techtype` VALUES ('Carp','Carpenter'),('Elec','Electrician'),('Ittc','IT Technician'),('Mech','Mechanic'),('Plum','Plumber');
+INSERT INTO `techtype` VALUES ('Arch','Architect'),('Carp','Carpenter'),('Elec','Electrician'),('Ittc','IT Technician'),('Mech','Mechanic'),('Nett','Network Technician'),('Plum','Plumber'),('Surv','Surveyour');
 /*!40000 ALTER TABLE `techtype` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-25  0:09:54
+-- Dump completed on 2018-06-26 14:10:53
