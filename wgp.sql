@@ -47,14 +47,16 @@ DROP TABLE IF EXISTS `customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `customer` (
-  `CustID` int(255) NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
   `ContactNo` int(11) DEFAULT NULL,
   `Password` varchar(255) NOT NULL,
-  PRIMARY KEY (`CustID`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `CuID` int(255) NOT NULL AUTO_INCREMENT,
+  `CustID` varchar(255) NOT NULL,
+  PRIMARY KEY (`CuID`),
+  UNIQUE KEY `CustID` (`CustID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,6 +65,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES ('W.M.D.N.L.','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$3c/hGEbBlFW9hL9upueHueYvqDtda3LNUkPNTn40beDpDAOcCgAGe',1,'Niweera'),('Nipuna','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$TLmvFRB8z2eHUT49pCaFbeTIzuoHSnZ35PMJo61/iuF6hIVBmUqMK',2,'Niweera2'),('Nipuna2','Weerasekara','w.nipuna@gmail.com',766419486,'$2y$10$sQJuQekJeZhcfF03Wn9Tq./O6SvpeRTZvLJ0seHB9.w3/QtkrBq2i',3,'Niweera3');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-26 14:10:53
+-- Dump completed on 2018-06-26 15:33:30
