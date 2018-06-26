@@ -25,6 +25,7 @@
 					<a href="../services">Services</a>
 					<a href="../help">Help</a>
 					<a href="../login">Log in</a>
+					<a href="../login#signup">Sign Up</a>
 				</div>
 			</div>
 		</header>
