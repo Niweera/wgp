@@ -81,8 +81,8 @@
 					echo "</select><br><br>";
 				?>
 				
-				<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:262px;"><br>
-				
+				<input type="submit" name="Search" value="Search" style="width:80px;height:30px;margin-left:262px;">
+				<input type="submit" name="messages" value="View Messages" style="width:110px;height:30px"><br>
 				<!--<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="Carpenter") {echo "checked";}?> value="Carpenter" >Carpenter
 					<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="Electrician") {echo "checked";}?> value="Electrician">Electrician
 					<input type="radio" name="radio" <?php //if (isset($_POST['radio']) && ($_POST['radio'])=="IT technician") {echo "checked";}?> value="IT technician">IT Technician
@@ -134,6 +134,23 @@
 							}
 						}
 					}
+
+					if (null !==(filter_input(INPUT_POST, 'messages'))){
+						$sql = "SELECT name, subject, email, note FROM techcontact;";
+						$result=mysqli_query($conn,$sql);
+						$queryResult=mysqli_num_rows($result);
+						if ($queryResult > 0){
+							echo "<table>";
+							echo "<tr><th>Name</th><th>Subject</th><th>Email</th><th>Note</th></tr>";
+							while ($row=mysqli_fetch_assoc($result)){
+								$name = $row['name'];
+								$subject = $row['subject'];
+								$email = $row['email'];
+								$note = $row['note'];
+								echo "<tr><td>".$name."</td><td>".$subject."</td><td>".$email."</td><td>".$note."</td></tr>";    
+								}
+						echo "</table>";}				
+					}		
 
 				?>
 			</div>
