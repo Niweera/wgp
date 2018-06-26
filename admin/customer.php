@@ -1,6 +1,28 @@
 <?php
     include 'header.php';
 ?>
+<style>
+
+table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 90%;
+		border: 1px solid #ddd;
+		margin-left: 50px;
+		}
+
+th, td {
+	text-align: left;
+	padding: 16px;
+}
+
+tr:nth-child(even) {
+background-color: #caccce;
+}
+
+</style>
+<div class="content">
+			<div class="content-inside" style="text-align:center">
  <header>
     <div class="navbar">
         <a href="../" class="logo">FIND LANKA</a>
@@ -14,26 +36,7 @@
         </div>
     </div>
 </header>
-<style>
 
-	table {
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 90%;
-			border: 1px solid #ddd;
-			margin-left: 50px;
-			}
-
-	th, td {
-		text-align: left;
-		padding: 16px;
-}
-
-	tr:nth-child(even) {
-    background-color: #caccce;
-}
-
-</style>
 <!--the page views the customer database-->
 		<h1 style="text-align:center;">Customer Database</h1>
 		<?php
@@ -42,7 +45,7 @@
 						$queryResult=mysqli_num_rows($result);
 						if ($queryResult > 0){
 							echo "<table>";
-							echo "<tr><th>Username</th><th>FirstName</th><th>LastName</th><th>Email</th><th>ContactNo</th></tr>";
+							echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Contact No</th></tr>";
 							while ($row=mysqli_fetch_assoc($result)){
 								$uname = $row['CustID'];
 								$first = $row['FirstName'];
@@ -54,18 +57,19 @@
 						echo "</table>";}
 						
 		?>
+
 		
+		</div>
+		</div>
 			
-		<footer>
-			<div class="footer" style="position:fixed">
-				<p class="footerleft"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
-				<div class="footerright">
-					<a href="#home">Link 1</a>
-					<a href="#about">Link 2</a>
-					<a href="#contact">Link 2</a>
-				</div>
-				<div style="clear: both;"></div>
+		<footer class="stickyfooter">
+			<p class="footerleft" style="margin-top:0"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<div class="footerright">
+				<a href="#home">Link 1</a>
+				<a href="#about">Link 2</a>
+				<a href="#contact">Link 2</a>
 			</div>
+			<div style="clear: both"></div>
 		</footer>
 	</body>
 </html>

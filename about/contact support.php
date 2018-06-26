@@ -40,21 +40,29 @@
 						</tr>
 						<tr>
 							<td>Your Name  *</td>
-							<td><input type="text" size="100" maxlength="40" placeholder = "Name" required></td>
+							<td><input type="text" name="name" size="100" maxlength="40" placeholder = "Name" required></td>
 						</tr>
 						<tr>
 							<td>Email Address *</td>
-							<td><input type="email" name = "useemail" placeholder = "Email" required></td>
+							<td><input type="email" name = "email" placeholder = "Email" required></td>
 						</tr>
+						<tr>
+							<td>Select Type *</td>
+							<td>
+								<select name="type">								
+									<option value="customer">Customer</option>
+									<option value="technician">Technician</option>
+								</select>
+							</td>
 						<tr>
 							<td>Subject  *</td>
 							<td><input type="subject" name = "subject" placeholder = "Subject" required></td>
 						</tr>
 						
 						<tr>
-							<td>Note*</td>
+							<td>Note *</td>
 							<td>
-								<textarea name="message" rows="10" cols="100" required>
+								<textarea name="note" rows="10" cols="100" required>
 								</textarea>
 							</td>
 						</tr>
@@ -90,7 +98,38 @@
 
 <?php
 	if (null !==(filter_input(INPUT_POST, 'submit'))){
-		//write the php code here to send the message to the db 
-		//the info will be read by the admin by retrieving from the db
-	}				
+        $name = filter_input(INPUT_POST,'name');
+        $email = filter_input(INPUT_POST,'email');
+		$type = filter_input(INPUT_POST,'type');
+		$subject = filter_input(INPUT_POST,'subject');
+		$note = filter_input(INPUT_POST,'note');
+		if ($type=="customer"){
+			$sql = "INSERT INTO custcontact (name,subject,note,email) VALUES ('$name','$subject','$note','$email');";
+
+        	$mysqli_query = mysqli_query($conn, $sql);
+       
+			if (!$mysqli_query){
+						echo "<script>alert(\"Error Occured!\");</script>";
+					}else {
+						$tvidr = mysqli_insert_id($conn); 
+						echo "<script>alert(\"We received your message!\");</script>";
+					}
+
+
+		}else{
+			$sql = "INSERT INTO techcontact (name,subject,note,email) VALUES ('$name','$subject','$note','$email');";
+
+        	$mysqli_query = mysqli_query($conn, $sql);
+       
+			if (!$mysqli_query){
+						echo "<script>alert(\"Error Occured!\");</script>";
+					}else {
+						$tvidr = mysqli_insert_id($conn); 
+						echo "<script>alert(\"We received your message!\");</script>";
+					}
+
+		}
+        
+        
+    }			
 ?>
