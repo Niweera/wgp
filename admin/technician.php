@@ -1,7 +1,13 @@
 <?php
-    include 'header.php';
+    include '../dbconf/dbh.php';
 ?>
- 
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Administration</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
 			table {
 				border-collapse: collapse;
@@ -31,7 +37,8 @@
 				border: 1px solid grey;
 			}
 		</style>
-
+	</head>
+	<body>
 		<div class="content">
 			<div class="content-inside" style="text-align:center">
 				<header>

@@ -1,10 +1,13 @@
 <?php
-    include 'header.php';
+    include '../dbconf/dbh.php';
 ?>
 
-<?php
-    include 'userheader.php';
-?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Administration</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
 			.center {
 				margin: auto ;
@@ -17,8 +20,11 @@
 				background-color: #c6cbd3;
 			}
 		</style>
-		
-
+	</head>
+	<body>
+		<?php
+			include 'userheader.php';
+		?>
 		<h1 style="text-align:center">Change User Details</h1>
 		<div class ="center">
 		<form method="post" action="edit.php">

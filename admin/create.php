@@ -1,10 +1,19 @@
 <?php
-    include 'header.php';
+    include '../dbconf/dbh.php';
 ?>
 
-<?php
-    include 'userheader.php';
-?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Administration</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+
+		<?php
+			include 'userheader.php';
+		?>
 		<!--this form should be broken into two forms, since it is bad practice to add two kinds of users in one form-->
 		<form action="create.php" method="post">
 			<div class="center" style="text-align:center">

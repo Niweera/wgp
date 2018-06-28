@@ -1,36 +1,45 @@
 <?php
-    include 'header.php';
+    include '../dbconf/dbh.php';
 ?>
 
-<?php
-    include 'userheader.php';
-?>  
-<style>
-	button {
-		background-color: #333333; 
-		border: none;
-		color: white;
-		padding: 15px 0px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 10px 10px 10px 10px;
-		border-radius:5px;
-		width: 140px;
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Administration</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<style>
+			button {
+				background-color: #333333; 
+				border: none;
+				color: white;
+				padding: 15px 0px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 10px 10px 10px 10px;
+				border-radius:5px;
+				width: 140px;
 			}
-	.center {
-		margin: auto ;
-		margin-top: 15px;
-		width: 50%;
-		padding: 10px;
-		text-align: center;
-		border: 2px solid grey;
-		background-color: #c6cbd3;
+			.center {
+				margin: auto ;
+				margin-top: 15px;
+				width: 50%;
+				padding: 10px;
+				text-align: center;
+				border: 2px solid grey;
+				background-color: #c6cbd3;
 			}
+		</style>
+	</head>
+	<body>
 
-</style>
-<!--the page contain the links to other admin functions Create, Update and Delete-->
+		<?php
+			include 'userheader.php';
+		?>  
+
+		<!--the page contain the links to other admin functions Create, Update and Delete-->
       	<div class ="center">
 			<h1>User Authentication</h1>
 			<a href="create.php"><button type="button">Create profile</button></a><br><br>

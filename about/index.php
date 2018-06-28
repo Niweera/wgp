@@ -1,7 +1,15 @@
 <?php
-    include 'header.php';
-?> 
+    include '../dbconf/dbh.php';
+?>
 
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
 		<header>
 			<div class="navbar">
 				<a href="../" class="logo">FIND LANKA</a>

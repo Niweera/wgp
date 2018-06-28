@@ -1,7 +1,13 @@
 <?php
-    include 'header.php';
+    include '../dbconf/dbh.php';
 ?>
 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Administration</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
 			footer {
 				background: #42A5F5;
@@ -20,7 +26,8 @@
 				background-color: #c6cbd3;
 			}
 		</style>
-		
+	</head>
+	<body>
 		<div class="content">
 			<div class="content-inside" style="text-align:center">
 				<?php
@@ -99,7 +106,6 @@
 					<button type="submit" name="del2" onclick=myfunction()>Delete Technician</button>
 				</form>
 				</div>
-
 			</div>
 		</div>
 		<!--sticky footer is a kind of footer to expand when needed otherwise it is a fixed footer-->
@@ -111,8 +117,7 @@
 				<a href="#contact">Link 2</a>
 			</div>
 			<div style="clear: both"></div>
-		</footer>
-		
+		</footer>	
 	</body>
 </html>
 

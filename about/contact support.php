@@ -1,6 +1,15 @@
 <?php
-    include 'header.php';
-?> 
+    include '../dbconf/dbh.php';
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Contact Support</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body> 
 		<header>
 			<div class="navbar">
 				<a href="../" class="logo">FIND LANKA</a>
@@ -29,11 +38,11 @@
 				</div>
 			</div>
 		</header>
-			<div class = "wrapper">
-				<!--edit from here-->
-					<form action = "contact support.php" method = "post">
-						<div class = "table-design">
-						<table align=center border= 1>
+		<div class = "wrapper">
+			<!--edit from here-->
+			<form action = "contact support.php" method = "post">
+				<div class = "table-design">
+					<table align=center border= 1>
 						<tr>
 							<body font color="black">
 							<th colspan=2>Send Us a Message</th>
@@ -57,8 +66,7 @@
 						<tr>
 							<td>Subject  *</td>
 							<td><input type="subject" name = "subject" placeholder = "Subject" required></td>
-						</tr>
-						
+						</tr>						
 						<tr>
 							<td>Note *</td>
 							<td>
@@ -67,33 +75,31 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan=2 align="center">
-							
+							<td colspan=2 align="center">							
 							<div class = "button">
 								<input type=submit value=Submit name="submit"> 
 								<input type=reset value=Cancel>
-							</div><!--button-->
-							
+							</div><!--button-->							
 							</td>
 						</tr>
 					</table>
-						</div><!--table-design-->
-					</form>
-				<!--end edit from here-->
-			</div><!--wrapper-->
-			<footer>
-				<div class="footer" style="position:fixed">
-				<p class="footerleft" style="padding-top:15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
-				<div class="footerright">
-					<a href="#home">Link 1</a>
-					<a href="#about">Link 2</a>
-					<a href="#contact">Link 2</a>
-				</div>
-				<div style="clear: both;"></div>
-				</div>
-			</footer>
-		</body>
-	</html>
+				</div><!--table-design-->
+			</form>
+			<!--end edit from here-->
+		</div><!--wrapper-->
+		<footer>
+			<div class="footer" style="position:fixed">
+			<p class="footerleft" style="padding-top:15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<div class="footerright">
+				<a href="#home">Link 1</a>
+				<a href="#about">Link 2</a>
+				<a href="#contact">Link 2</a>
+			</div>
+			<div style="clear: both;"></div>
+			</div>
+		</footer>
+	</body>
+</html>
 		
 
 <?php
