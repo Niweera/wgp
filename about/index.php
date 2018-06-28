@@ -83,7 +83,7 @@
 						<h3>Plumbers</h3>
 						<p>A complex arrangement of rigid steel piping and stop valves regulate flow to various parts of the building.</p>
 					</div><!--Services-->
-					<a href="Service/index.php">View All Of Our Services &raquo;</a>
+					<a href="../services">View All Of Our Services &raquo;</a>
 				</div><!--home-col-->
 				<div class="home-col">
 					<div class="about">

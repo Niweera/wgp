@@ -91,7 +91,7 @@
 					<option value="Mech001">Tinkering</option>
 					<option value="Carp001">Wood works</option>	
 				</select><br><br>-->
-				
+				Rate: <input type="text" name="rate" placeholder="Leave empty for a customer" value="" style="margin-left:98px" required/><br><br>
 				<button type="submit" name="submit" style="width:210px">Create Customer Account</button>
 				<button type="submit" name="submit2" style="width:210px">Create Technician Account</button>
 				
@@ -143,10 +143,11 @@
         $password = filter_input(INPUT_POST,'pw');
         $ocp = filter_input(INPUT_POST,'ocp');
         $city = filter_input(INPUT_POST,'city');
-        $skill = filter_input(INPUT_POST,'skid');
+		$skill = filter_input(INPUT_POST,'skid');
+		$rate = filter_input(INPUT_POST,'rate');
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
       
-		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Password,Occupation,City) VALUES ('$uname','$fname','$lname','$email','$cont','$hashed_password','$ocp','$city');";
+		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Password,Occupation,City,Rate) VALUES ('$uname','$fname','$lname','$email','$cont','$hashed_password','$ocp','$city','$rate');";
 		$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill');";
 		$mysqli_query = mysqli_multi_query($conn, $sql2);
      
