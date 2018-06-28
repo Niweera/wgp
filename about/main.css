@@ -2,7 +2,9 @@
 
 * {margin: 0; padding: 0;}
 
-	a{text-decoration: none;}
+a{text-decoration: none;}
+
+p{margin-top: 10px; margin-bottom: 15px; font-size: 18px; color: #444;}
 
 .clearfix{
 	overflow: auto;
@@ -12,201 +14,147 @@
 	margin: 0 auto;
 	width: 1350px;
 }
-
-.top-bar{
-	width: 1350px;
-	background: SteelBlue;
+.head-bar{
+    color: #262626;
+    margin-top: 50px;
+   	margin-bottom: 50px;
+    padding: 50px;
+    background: #2323;
 }
-.top-bar-links{
-	float: right;
+.left-text{
+    display: block;
+    float: left;
+    padding: 25px;
+    width: 50%;
 }
-.top-bar-links ul {
-	margin: 20px;
-	list-style: none;
+.left-text h1{
+	font-family: time-roam;
+	font-size: 38;
 }
-.top-bar-links ul li{
-	padding: 10px;
-	display: inline-block;
-	border-right: 1px solid white;
+.left-text p{
+	font-size: 24;
 }
-.top-bar-links ul li:last-child{
-	border: 0;
+.home1{
+	width: 1300px;
+	margin: 15px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	height: 650px;
 }
-	
-.top-bar-links ul li a{
-	color: white;
+.home-col{
+	width: 410.33px;
+	height: 650px;
+	float: left;
+	margin-left: 20px;
 }
-.name{
-	margin: 20px;
+.home-col h2 {
+	margin: 30px 0 30px 0;
 	font-size: 30px;
-	color: LightBlue;
-}
-header
-.topic h1{
-	font-size: 48px;
 	font-weight: normal;
-	letter-spacing: -1px;
-	font-variant: small-caps;
 }
-nav{
-	text-align: center;
-	margin-top: 2px;
-	background: #000;
-	background: linear-gradient(#0d0d0d, #404040, #0d0d0d);
-	border-radius: 10px;
+.img1{
+	width: 413.33px;
 }
-nav ul{
-	list-style: none;
-}
-nav ul li{
-	display: inline-block;
-}
-nav ul li a{
-	color: white;
-	text-transform: uppercase;
-	margin: 10px 40px 10px 40px;
-	display: inline-block;
-}
-nav ul li a:hover{
-	color: red;
-}
-
-nav ul li a.active {
-	padding: 3px;
-	border-radius: 4px;
-	background-color: #7f858e;
-	color: white;
-  }
-
-
-.table{
-	width: 1300px;
-	margin: 60px;
-}
-.table-image{
-	width: 650px;
-	float: left;
-}
-.table-text{
-	width: 600px;
-	float: left;
-}
-.table p{
-	margin-top: 10px;
-	margin-right: 20px;
-	font-size: 25px;
-}
-
-
-.text ul li{
-	width :1000px;
-	font-size: 30px;
-	margin: 20px 40px 20px 40px;
-	float: left;
-}
-.text h2{
-	margin-left: 60px;
-	margin-top: -20px;
-	float: left;
-}
-.text p{
-	margin-left: 100px;
-	margin-top: 5px;
-	font-size: 25px;
-	float: left;
-}
-.text1 p{
-	margin-left: 60px;
-	margin-top: 5px;
-	font-size: 25px;
-	float: left;
-}
-.table1 {
-	width: 1300px;
-	margin: 60px;
-	float: left;
-}
-.table-image1 {
-	margin-top : 100px;
-	width: 650px;
-	float: left;
-}
-.table-image2 {
-	margin-top: 100px;
-	width: 650px;
-	float: left;
-}
-.table p1{
-	margin-top: 100px;
-	margin-right: 20px;
-	font-size: 25px;
-}
-.table h1{
+.Services{
 	margin-bottom: 20px;
 }
-.text2 h1{
-	margin-top: 100px;
-	margin-left: 15px;
-	margin-bottom: 50px;
+.Services img{
+	width: 64px;
+	float: left;
+	margin-right: 15px;
 }
-.table2 {
+.Services p{
+	margin-top: 0;
+}
+
+table{
+	background-color: transparent;
+	border-collapse: collapse;
+    border-spacing: 0;
+    margin: 25px;
+}
+table .qir-blue-2{
+	color: #00B6F1;
+}
+table .qir-h5{
+	font-size: 30px;
+
+}
+table p{
+	font-size: 20px;
+    line-height: 1.5;
+    margin: 15px;
+}
+.home2{
 	width: 1300px;
-	margin: 60px;
+	margin: 15px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	height: 680px;
 }
-.table-call {
-	margin-top: 60px;
-	width: 650px;
+.home-col2{
+	width: 607.5px;
+	height: 680px;
 	float: left;
+	margin-left: 20px;
 }
-.table-support {
-	margin-top: 60px;
-	width: 650px;
+.home-col2 h1{
+	color: #00B6F1;
+	font-weight: normal;
+}
+.home3{
+	width: 1300px;
+	margin: 15px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	height: 450px;
+}
+.home-col3{
+	width: 301.25px;
+	height: 450px;
 	float: left;
+	margin-left: 20px;
 }
-.table-call h2{
-	width: 650px;
-	margin-left: 150px;
-	margin-bottom: 10px;
+.home-col3 h1{
+	color: #00B6F1;
+	font-weight: normal;
 }
-.table-support h2{
-	width: 650px;
-	margin-left: 5px;
-	margin-bottom: 10px;
+.home4{
+	width: 1300px;
+	margin: 25px;
+	height: 350px;
 }
-.table-call p{
-	width: 650px;
-	margin-left: 60px;
+.home-col4{
+	width: 607.5px;
+	height: 350px;
+	float: left;
+	margin-left: 20px;
+}
+.home-col4 h1{
+	font-weight: normal;
+}
+.home-col4 p{
+	font-size: 24px;
+}
+.home-col4 h3{
 	font-size: 20px;
 }
-.table-call p1{
-	font-size: 18px;
-}
-.table-call h3{
-	margin-left:140px;
+.home-col4 .number{
 	font-size: 30px;
 }
-.table-support p{
-	margin-left: 10px;
-	font-size: 20px;
-}
-.table-call a{
-	margin-left: 70px;
-	margin-top: 5px;
-	font-size: 30px;
-	color: royalblue;
-}
-.table-support form{
+.home-col4 form{
 	margin-left: 50px;
 	margin-top: 5px;
 	font-size: 20px;
 }
-.table-support form button{
+.home-col4 form button{
 	color: royalblue;
 	border-radius: 5px;
 	padding: 10px 40px;
 	margin-top: 10px;
 	font-size: 15px;
 	margin-bottom: 10px;
+	margin-left: 15px;
 }
 .contact h1{
 	margin-top: 30px;
@@ -244,31 +192,7 @@ form button{
 	margin-bottom: 10px;
 	margin-left: -80px;
 }
-.foot {
-	width: 1350px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	float: left;
-}
-.footcol {
-	width:306.25px;
-	float: left;
-	margin-left: 25px;
-	border-top: 1px solid #000;
-}
-.footcol h2{
-	text-transform: uppercase;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	color: #444;
-}
-.tweet p{
-	font-size: 20px;
-	color: darkslategray;
-}
-.tweet p1 {
-	font-size: 15px;
-}
+
 .office{
 	width:1320px;
 	margin: 15px;
@@ -291,12 +215,14 @@ form button{
 	margin-top: 15px;
 	margin-bottom: 15px;
 	float: left;
+	margin: 15px;
 }
 .table-txt {
 	width:306.25px;
 	float: left;
 	margin-left: 25px;
 	border-top: 1px solid #000;
+	margin-bottom: 35px;
 }
 .table-txt p{
 	text-transform: uppercase;
@@ -304,21 +230,13 @@ form button{
 	margin-bottom: 20px;
 	color: #444;
 }
-.copyright {
-	width: 1350px;
-	background: #eee;
-	float: left;
-	margin-top: 150px;
-	margin-bottom:15px;
-	margin-left: 15px;
-	margin-right: 15px;
-}
 form
 .table-design {
 	margin-top: 5px;
 	margin-left: 200px;
 	float: left;
 	background: #eee;
+	margin-bottom: 30px;
 }
 input, textarea, select {
 	background: lightgrey;

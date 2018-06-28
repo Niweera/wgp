@@ -6,8 +6,8 @@
 <html>
 	<head>
 	<title>Contact Us</title>
-	<link rel="stylesheet" type="text/css" href="./main.css">
-	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" type="text/css" href="../services/main.css">
+	<link rel="stylesheet" type="text/css" href="../services/style.css">
 	</head>
 	<body>
 
@@ -82,7 +82,6 @@
 				</div><!--wrapper-->
 
 				<div style="padding:400px">
-				<br><br>
 				</div>
 			</div>
 		</div>

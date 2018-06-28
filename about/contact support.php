@@ -5,9 +5,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Contact Support</title>
-	<link rel="stylesheet" type="text/css" href="./main.css">
-	<link rel="stylesheet" type="text/css" href="./style.css">
+		<title>Contact Support</title>
+		<link rel="stylesheet" type="text/css" href="./main.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
 	</head>
 	<body> 
 		<header>
@@ -89,7 +89,7 @@
 		</div><!--wrapper-->
 		<footer>
 			<div class="footer" style="position:fixed">
-			<p class="footerleft" style="padding-top:15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<p class="footerleft" style="padding-top:4px;color:white"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">
 				<a href="#home">Link 1</a>
 				<a href="#about">Link 2</a>

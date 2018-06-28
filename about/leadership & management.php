@@ -41,29 +41,50 @@
 		</header>
 
 		<div class = "wrapper">
-			<!--edit from here-->
-			<h1 style="margin-top:5px">Leadership & Management</h1>
-			<div class = "table" style="width:1200px">
-				<h1><u>Leadership</u></h1>
-					<div class = "table-image" style="width:500px">
-						<img src = "image/images (2).jpg" alt="Image">
-					</div><!--table-image-->
-					<div class = "'table-text">
-						<p1>Leadership of our company's management to set and achieve challenging goals take swift and decisive action, out perform the competiton and inspire others to perform well.</p1>
-					</div><!--table-text-->
-			</div><!--table-->
-			<div class = "text2">
-				<h1><u>Management</u></h1>
-				<center>
-					<img src = "image/organization chart.jpg" alt= "Image">
-				</center>
-				<br>
-			</div>
-			<!--end edit from here-->
+			<div class="head-bar">
+				<div class="left-text">
+					<p>Leadership of our company's management to set and achieve challenging goals take swift and decisive action, out perform the competiton and inspire others to perform well.</p>
+				</div><!--left-text-->
+				<div class="right-banner-image">
+					<img src="image/images (6).jpg" alt="leadership">
+				</div><!--right-banner-image-->
+			</div><!--head-bar-->
+
+			<div class="home2 clearfix">
+				<div class="home-col2">
+					<h1>Our Organization Chat</h1>
+					<img src="image/organization chart.jpg" width="100%" alt="organization">
+				</div><!--home-col2-->
+				<div class="home-col2">
+					<h1>1.Increase Customer Satisfaction</h1>
+					<br>
+					<p>Provide online self-service options with integrated Knowledge Management and Communities.</p>
+					<br>
+
+					<h1>2.Reduce Service Cost</h1>
+					<br>
+					<p>Drive efficiencies by automating tasks for common customer issues with the servics catalog.</p>
+					<br>
+
+					<h1>3.Improve agent and Field Tech Productivity</h1>
+					<br>
+					<p>Deliver service as a "team sport" by connecting customer service with field service.</p>
+					<br>
+
+					<h1>4.Moniter Service Patterns</h1>
+					<br>
+					<p>Identify trends and proactively to issues.</p>
+
+					<h1>5.Improve Product or Service Quality</h1>
+					<br>
+					<p>Utilize the internet of Things to identify service and product issues before they affect customers.</p>
+
+				</div><!--home-col2-->
+			</div><!--home2 clearfix-->
 		</div><!--wrapper-->
 		<footer>
 			<div class="footer" style="position:relative">
-			<p class="footerleft" style="padding-top: 15px"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
+			<p class="footerleft" style="padding-top: 4px;color:white"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">
 				<a href="#home">Link 1</a>
 				<a href="#about">Link 2</a>
