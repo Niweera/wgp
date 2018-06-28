@@ -89,7 +89,7 @@
 							$queryResult=mysqli_num_rows($result);
 							if ($queryResult > 0){
 								echo "<table>";
-								echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Contact No</th><th>Rate</th></tr>";
+								echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Contact No</th><th>Rate (Rs.)</th></tr>";
 								while ($row=mysqli_fetch_assoc($result)){
 									//$uname = $row['TechID'];
 									$first = $row['FirstName'];
