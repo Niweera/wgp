@@ -30,7 +30,8 @@
 				border-spacing: 0;
 				width: 90%;
 				border: 1px solid #ddd;
-				margin-left: 70px;
+				margin-left: 50px;
+				margin-right: 50px;
 			}
 
 			th, td {
