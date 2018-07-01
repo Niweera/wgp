@@ -106,22 +106,29 @@
 
 				<?php
 					if (isset($_POST['Search'])) {
+						
 						$ocp=$_POST['ocp'];
 						$city=$_POST['city'];
-						echo '<form action="user2.php" method="post" class="center">';
-						echo 'Select your issue:';
-						$result = $conn->query("select SkID, SkillName from skill where SkID like '%$ocp%'");	
-						echo "<select name=\"skill\" style=\"margin-left:168px\">";
-						while ($row = $result->fetch_assoc()) {
-							unset($skid, $skname);
-							$skid = $row['SkID'];
-							$skname = $row['SkillName']; 
-							echo '<option value="'.$skid.'">'.$skname.'</option>'; 
+						
+						if ($ocp != "" && $city != ""){
+
+							echo '<form action="user2.php" method="post" class="center">';
+							echo 'Select your issue:';
+							$result = $conn->query("select SkID, SkillName from skill where SkID like '%$ocp%'");	
+							echo "<select name=\"skill\" style=\"margin-left:168px\">";
+							while ($row = $result->fetch_assoc()) {
+								unset($skid, $skname);
+								$skid = $row['SkID'];
+								$skname = $row['SkillName']; 
+								echo '<option value="'.$skid.'">'.$skname.'</option>'; 
+							}
+							echo "</select><br><br>";
+							echo '<input type="hidden" name="ocu" value="'.$ocp.'">';
+							echo '<input type="hidden" name="cityname" value="'.$city.'">';
+							echo '<input type="submit" name="Search2" value="Find Technician" style="width:110px;height:30px;margin-left:262px;"><br>';
+						}else{
+							echo "Please select both technician and the city!";
 						}
-						echo "</select><br><br>";
-						echo '<input type="hidden" name="ocu" value="'.$ocp.'">';
-						echo '<input type="hidden" name="cityname" value="'.$city.'">';
-						echo '<input type="submit" name="Search2" value="Find Technician" style="width:110px;height:30px;margin-left:262px;"><br>';
 					}
 
 					

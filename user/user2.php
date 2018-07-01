@@ -85,6 +85,10 @@
 							//echo $var_value2;
 							//echo $skill;
 							$sql = "SELECT FirstName, LastName, Email, ContactNo, Rate FROM technician WHERE TechID IN (SELECT TechID FROM techskill WHERE SkID ='$skill') AND City='$var_value2'";
+							$sql2 = "INSERT INTO techcount (techid) VALUES ('$var_value1');";
+							$sql3 = "INSERT INTO skillcount (skid) VALUES ('$skill');";
+							$result2 = mysqli_query($conn, $sql2);
+							$result3 = mysqli_query($conn, $sql3);
 							$result=mysqli_query($conn,$sql);
 							$queryResult=mysqli_num_rows($result);
 							if ($queryResult > 0){
@@ -102,7 +106,7 @@
 							echo "</table>";
 							echo '<br><br><a href="./user.php">Go Back</a>';
 							}else{
-								echo "Sorry no results found!";
+								echo "Sorry no results found!<br><br>";
 								echo '<a href="./user.php">Go Back</a>';
 							}
 						}
