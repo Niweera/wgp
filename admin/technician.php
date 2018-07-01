@@ -49,7 +49,7 @@
 							<a href="./users.php">User Administration</a>
 							<a href="./customer.php">Customers</a>
 							<a class="active" href="./technician.php">Technicians</a>
-							<a href="#help">Reports</a>
+							<a href="./reports.php">Reports</a>
 							<a href="#login">Log out</a>
 						</div>
 					</div>
