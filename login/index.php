@@ -32,12 +32,12 @@
 				}
 				else
 				{
-					$errorMsg =  "Wrong Email Or Password";
+					echo "<script>alert(\"Wrong Email Or Password!\");</script>";
 				}
 			}
 			else
 			{
-				$errorMsg =  "No User Found";
+				echo "<script>alert(\"No User Found!\");</script>"; 
 			}
 		}
 	}
@@ -70,12 +70,12 @@
 				}
 				else
 				{
-					$errorMsg =  "Wrong Email Or Password";
+					echo "<script>alert(\"Wrong Email Or Password!\");</script>";
 				}
 			}
 			else
 			{
-				$errorMsg =  "No User Found";
+				echo "<script>alert(\"No User Found!\");</script>";
 			}
 		}
 	}
@@ -191,9 +191,9 @@
 					<h1>Login Here</h1>
 					<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" style="margin:0px">
 						<p>Email</p>
-						<input type="text" name="email" placeholder="Enter Email" class="answers">
+						<input type="text" name="email" placeholder="Enter Email" class="answers" required>
 						<p>Password</p>
-						<input type="password" name="password" placeholder="Enter Password" class="answers">
+						<input type="password" name="password" placeholder="Enter Password" class="answers" required>
 						<input type="submit" name="submit" value="Customer Login" class="login"><br>
 						<input type="submit" name="submit2" value="Admin Login" class="login"><br>
 						<a href="../signup" class="havent">Don't have an account?</a>
