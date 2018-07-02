@@ -1,4 +1,11 @@
 <?php
+    session_start();
+        
+    if(!isset($_SESSION['user_id']))
+    {
+      header('location: ../login');
+      exit;
+    }
     include '../dbconf/dbh.php';
 ?>
 
@@ -21,7 +28,7 @@
                 <a href="./customer.php">Customers</a>
                 <a href="./technician.php">Technicians</a>
                 <a href="./reports.php">Reports</a>
-                <a href="#login">Log out</a>
+                <a href="../logout">Log out</a>
               </div>
           </div>
         </header>

@@ -62,7 +62,7 @@
 							<a class="active" href="./customer.php">Customers</a>
 							<a href="./technician.php">Technicians</a>
 							<a href="./reports.php">Reports</a>
-							<a href="#login">Log out</a>
+							<a href="../logout">Log out</a>
 						</div>
 					</div>
 				</header>
