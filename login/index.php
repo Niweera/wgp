@@ -26,7 +26,7 @@
 					$_SESSION['email'] = $row['Email'];
 					
 					
-					header('location: ../user/user.php');
+					header('location: ../user');
 					exit;
 					
 				}

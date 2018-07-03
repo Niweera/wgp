@@ -37,6 +37,19 @@
 			color: black;
 			text-align: justify;
 		}
+		.anchor a{
+			background-color: #333333; 
+			border: none;
+			color: white;
+			padding: 15px 0px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px 20px 10px 10px;
+			border-radius:5px;
+			width: 270px;
+		}
 	</style>
 	</head>
 	<body>
@@ -77,6 +90,13 @@
 				</div>
 				</header>
 				<h1 style="margin-top:20px;color:black">Your need, our solution</h1>
+				<?php
+					if(isset($_SESSION['user_id'])){
+						echo '<div class="anchor">';
+						echo '<a href="../user/user.php">Click here to find your technician!</a>';	
+						echo '</div>';					
+					}		
+				?>
 				<h1 style="margin-top:20px">ICT Technicians</h1>
 				<div class="one size " >
 					<img src="./img/ict.jpg" alt ="image" height="250px" width="500px">  
