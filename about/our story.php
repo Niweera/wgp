@@ -1,4 +1,5 @@
 <?php
+	session_start();
     include '../dbconf/dbh.php';
 ?>
 
@@ -36,8 +37,14 @@
 							</div> 
 							<a href="../services">Services</a>
 							<a href="../help">Help</a>
-							<a href="../login">Log in</a>
-							<a href="../signup">Sign Up</a>
+							<?php
+								if(!isset($_SESSION['user_id'])){
+									echo '<a href="../login">Log in</a>';
+									echo '<a href="../signup">Sign Up</a>';
+								}else{
+									echo '<a href="../logout">Log out</a>';
+								}			
+							?>
 						</div>
 					</div>
 				</header>
