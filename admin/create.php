@@ -28,6 +28,17 @@
 		</style>
 	</head>
 	<body>
+		<script>
+			var check = function() {
+				if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+					document.getElementById('message').style.color = 'green';
+					document.getElementById('message').innerHTML = 'Password confirmed!';
+				} else {
+					document.getElementById('message').style.color = 'red';
+					document.getElementById('message').innerHTML = 'Not matching';
+				}
+			}
+		</script>
 		<div class="content">
 			<div class="content-inside" style="text-align:center">
 				<?php
@@ -42,7 +53,9 @@
 						Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
 						Contact Number: <input type="text" name="cont" value="" required/><br><br>
 						Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
-						Password: <input type="password" name="pw" value="" style="margin-left:60px" required/><br><br>
+						Password: <input type="password" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();' required/><br><br>
+						Confirm Password:<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px" required/><br> 
+  						<span id='message' style="margin-left:120px"></span><br>
 						City: 
 						<!--added php support to add infinite no of select options-->
 						<?php 
@@ -92,6 +105,7 @@
 							$result = $conn->query("select SkID, SkillName from skill");	
 							echo "<select name=\"skid\" style=\"margin-left:100px\">";
 							echo '<option value="">Leave empty for a customer</option>';
+							
 							while ($row = $result->fetch_assoc()) {
 								unset($id, $name);
 								$id = $row['SkID'];
