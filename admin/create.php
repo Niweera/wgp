@@ -53,8 +53,8 @@
 						Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
 						Contact Number: <input type="text" name="cont" value="" required/><br><br>
 						Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
-						Password: <input type="password" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();' required/><br><br>
-						Confirm Password:<input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px" required/><br> 
+						Password: <input type="password" placeholder="Leave empty for technician" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();'/><br><br>
+						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px"/><br> 
   						<span id='message' style="margin-left:120px"></span><br>
 						City: 
 						<!--added php support to add infinite no of select options-->
@@ -98,7 +98,7 @@
 							echo "</select><br><br>";
 						?>
 						
-						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="0" style="margin-left:98px" required/><br><br>
+						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="" style="margin-left:98px"/><br><br>
 						<button type="submit" name="submit" style="width:210px">Create Admin Account</button>
 						<button type="submit" name="submit2" style="width:210px">Create Technician Account</button>
 						
