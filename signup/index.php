@@ -74,6 +74,17 @@
 		</style>
 	</head>
 	<body>
+		<script>
+			var check = function() {
+				if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+					document.getElementById('message').style.color = 'green';
+					document.getElementById('message').innerHTML = 'Password confirmed!';
+				} else {
+					document.getElementById('message').style.color = 'red';
+					document.getElementById('message').innerHTML = 'Not matching';
+				}
+			}
+		</script>
 		<div class="content">
 			<div class="content-inside" style="text-align:center">
 				<header>
@@ -119,9 +130,10 @@
 						<label for="contact_no"><b>Contact No</b></label><br>
 						<input type="text" name="contact" placeholder="Enter your contact number.." required><br>
 						<label for="password"><b>Password</b></label><br>
-						<input type="password" name="password" placeholder="Enter password.." required><br>
+						<input type="password" id="password" onkeyup='check();' name="password" placeholder="Enter password.." required><br>
 						<label for="confirm"><b>Confirm Password</b></label><br>
-						<input type="password" name="confirm" placeholder="Confirm your password.." required><br><br>
+						<input type="password" name="confirm" id="confirm_password"  onkeyup='check();' placeholder="Confirm your password.." required><br>
+						<span id='message'></span><br>
 						<button type="submit" name="submit" class="signup">Sign Up</button>
 						<div style="clear: both"></div>
 					</div>
