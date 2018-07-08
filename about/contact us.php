@@ -71,7 +71,7 @@
                             </div><!--home-col4-->
                     </div><!--home4 clearfix-->
                     <div class = "contact">
-					    <h1>Contact with one of Our Global Offices</h1>
+					    <h1>Contact with Our Office</h1>
 				    </div><!--contact-->                
                     <div class = "table3">
                         <div class = "office-image">
