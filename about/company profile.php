@@ -17,7 +17,14 @@
 				<div class="navbar">
 					<a href="../" class="logo">FIND LANKA</a>
 					<div class="rightnav">
-						<a href="../">Home</a>
+						<?php
+							if(!isset($_SESSION['user_id'])){
+								echo '<a href="../">Home</a>';
+							}else{
+								echo '<a href="../user">Home</a>';
+							}			
+						?>
+						
 						<div class="dropdown">
 							<button class="dropbtn"><a class="active" href="./">About Us</a> 
 							</button>
@@ -37,12 +44,12 @@
 						<a href="../services">Services</a>
 						<a href="../help">Help</a>
 						<?php
-						if(!isset($_SESSION['user_id'])){
-							echo '<a href="../login">Log in</a>';
-							echo '<a href="../signup">Sign Up</a>';
-						}else{
-							echo '<a href="../logout">Log out</a>';
-						}			
+							if(!isset($_SESSION['user_id'])){
+								echo '<a href="../login">Log in</a>';
+								echo '<a href="../signup">Sign Up</a>';
+							}else{
+								echo '<a href="../logout">Log out</a>';
+							}			
 						?>
 					</div>
 				</div>

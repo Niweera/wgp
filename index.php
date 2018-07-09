@@ -10,6 +10,13 @@
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
+			.container {
+				border: 2px solid #ccc;
+				background-color: #eee;
+				border-radius: 5px;
+				padding: 16px;
+				margin: 16px;
+			}
 			.one{
 				margin-left: 20px;
 				margin-top: 10px
@@ -52,6 +59,42 @@
 				padding: 0px;
 				padding-bottom: 50px;
 			}
+			.container img {
+				float: left;
+				margin-right: 20px;
+				border-radius: 10%;
+			}
+			.container::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.containera:link {
+				color: white;
+				text-decoration: none;
+				background-color: #7f858e;
+				display: inline-block;
+				padding: 5px 5px;
+				border-radius:4px;
+			}
+			.containera:visited {
+				color: white;
+				text-decoration: none;
+				background-color: #7f858e;
+				display: inline-block;
+				padding: 5px 5px;
+				border-radius:4px;
+			}
+			.containera:hover {
+				color: black;
+				text-decoration: none;
+				background-color: red;
+			}
+			.containera:active {
+				color: black;
+				text-decoration: none;
+				background-color: red;
+			}
 		</style>
 	</head>
 	<body>
@@ -61,7 +104,13 @@
 						<div class="navbar">
 							<a href="./" class="logo">FIND LANKA</a>
 							<div class="rightnav">
-								<a class="active" href="./">Home</a>
+								<?php
+									if(!isset($_SESSION['user_id'])){
+										echo '<a class="active" href="./">Home</a>';
+									}else{
+										echo '<a href="./user">Customer Home</a>';
+									}			
+								?>
 								<div class="dropdown">
 									<button class="dropbtn"><a href="./about">About Us</a> 
 									</button>
@@ -92,20 +141,34 @@
 						</div>
 				</header>
 				<!--this page will include company details of the Find Lanka-->
-				<div class="one size style">
-					<p>This is a web platform as a solution for  day to day domestic issue we all come across in our busy lives.<br><br><br> In the city of Colombo and suburban areas , finding a plumber to fix a plumbing issue in your house is as hard as finding a needle in a haystack.<br><br><br> And this scarcity extends to all types of skilled workers such as carpenters, electricians and etc.<br><br><br>People who look for services of skilled workers can not find them easily.<br><br><br>  And skilled workers who provide these services can not find work. And we are here to build up a bridge to satisfy the requirements of the both parties.<hr>
-						
-					</p>
-
-					<p class="form">Here we provide you an online technical support system to search for best service providers in need, indeed.</p>
+				<div class="container">
+					<img src="./homefiles/workers.jpg" alt="Workers"/>
+					<p style="font-size:38px">Looking for technicians?<br> In a rush, but nowhere to find them?<br> You came to THE RIGHT PLACE!<br>Register with us to receive our full services.</p>
 				</div>
-				<div class="one size style">
-					<p>This is a web platform as a solution for  day to day domestic issue we all come across in our busy lives.<br><br><br> In the city of Colombo and suburban areas , finding a plumber to fix a plumbing issue in your house is as hard as finding a needle in a haystack.<br><br><br> And this scarcity extends to all types of skilled workers such as carpenters, electricians and etc.<br><br><br>People who look for services of skilled workers can not find them easily.<br><br><br>  And skilled workers who provide these services can not find work. And we are here to build up a bridge to satisfy the requirements of the both parties.<hr>
-						
-					</p>
-
-					<p class="form">Here we provide you an online technical support system to search for best service providers in need, indeed.</p>
+				<div class="container">
+					<img style="float:right;margin-right:0px;margin-left:15px;width:500px;height:500px" src="./homefiles/w9.jpg" alt="OneMinute"/>
+					<p style="font-size:38px;text-align:center">Our one minute registration process is easy and fast,<br> We only collect your email address,<br> And we guarantee that we do not share it with any other parties without your consent.</p>
 				</div>
+				<div class="container">
+					<img src="./homefiles/w8.jpg" style="width:700px;height:400px" alt="Trust"/>
+					<p style="font-size:23px;text-align:justify;margin-top: 40px">&nbsp &nbsp This is a web platform as a solution for day to day domestic issues, which we all come across in our busy lives. In the city of Colombo and other suburban areas, finding a technician to fix an issue in your house is difficult as finding a needle in a haystack.<br>&nbsp &nbsp This scarcity extends to all types of skilled workers such as carpenters, electricians, plumbers, etc. People who look for services of skilled workers can not find them easily and skilled workers who provide these services can not find work.<br>&nbsp &nbsp Therefore, we are here to build up a bridge to satisfy the requirements of the both parties.</p>
+				</div>
+				<div class="container">
+					<img style="float:right;margin-right:0px;margin-left:15px;width:600px;height:400px" src="./homefiles/w3.jpg" alt="OneMinute"/>
+					<p style="font-size:38px;text-align:center">For technicians,<br> please contact our office for listing your services in our web site.<br> Within one day you can be listed on our website and start getting job orders...<br><a class="containera" style="margin-top: 20px;" href="../about/contact support.php" target="blank">Contact Us</a></p>
+				</div>
+				<div style="clear: both"></div>
+				<?php
+					if(!isset($_SESSION['user_id'])){
+						echo '<div class="container" style="background-color:#7f858e;color:white">';
+						echo '<p style="font-size:42px;margin:0px"><a class="containera" href="./signup">Register</a>, <a class="containera" href="./login">Login</a>, <a class="containera" href="./services">Go to Servies</a>, Voila...!</p>';
+						echo '</div>';
+					}else{
+						echo '<div class="container" style="background-color:#7f858e;color:white">';
+						echo '<p style="font-size:42px;margin:0px">To go to the Customer Homepage<a class="containera" style="margin-left: 5px" href="./user">Click Here</a>!</p>';
+						echo '</div>';
+					}			
+				?>
 			</div>
 		</div>
 		<footer class="stickyfooter">

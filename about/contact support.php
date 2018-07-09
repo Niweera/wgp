@@ -15,7 +15,13 @@
 			<div class="navbar">
 				<a href="../" class="logo">FIND LANKA</a>
 				<div class="rightnav">
-					<a href="../">Home</a>
+					<?php
+						if(!isset($_SESSION['user_id'])){
+							echo '<a href="../">Home</a>';
+						}else{
+							echo '<a href="../user">Home</a>';
+						}			
+					?>
 					<div class="dropdown">
 						<button class="dropbtn"><a href="./">About Us</a> 
 						</button>

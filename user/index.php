@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Find Technician</title>
+		<title>Welcome <?php echo $_SESSION['user_id'];?></title>
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>

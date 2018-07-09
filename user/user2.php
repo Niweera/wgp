@@ -52,7 +52,7 @@
 					<div class="navbar">
 						<a href="../" class="logo">FIND LANKA</a>
 						<div class="rightnav">
-							<a href="../">Home</a>
+							<a href="../user">Home</a>
 							<div class="dropdown">
 								<button class="dropbtn"><a href="../about">About Us</a> 
 								</button>
