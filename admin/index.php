@@ -134,9 +134,9 @@
 					k = k - 12
 				}else{
 					k = k
-					if (k < 10) {
+				};
+				if (k < 10) {
 						k = "0" + k
-					}
 				};
 				return k;
 			}
