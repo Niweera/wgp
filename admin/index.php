@@ -152,7 +152,10 @@
 					<p style="font-size:45px;font-wight:bold;margin-bottom:10px;margin-top:100px">Welcome, Administrator.</p>
           <p style="font-size:38px;margin:0px">What would you like to do today?</p>
           <p style="font-size:38px;margin-top:50px;margin-bottom:10px">Today is:</p>
-          <?php echo "<p style=\"font-size:38px;margin:0px\">" .date("l").", ".date("d/m/Y")."</p>";?>
+					<?php 
+						date_default_timezone_set("Asia/Colombo");
+						echo "<p style=\"font-size:38px;margin:0px\">" .date("l").", ".date("d/m/Y")."</p>";
+					?>
           <p id="time" style="font-size:38px;margin-top:10px"></p>
 				</div>
 				<div style="clear: both"></div>
