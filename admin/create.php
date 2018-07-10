@@ -1,12 +1,7 @@
 <?php
 	session_start();
-        
-    if(!isset($_SESSION['user_id']))
-    {
-      header('location: ../login');
-      exit;
-    }
-    include '../dbconf/dbh.php';
+	include '../dbconf/dbh.php';
+	include './adhead.php';
 ?>
 
 <!DOCTYPE html>
