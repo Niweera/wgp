@@ -111,6 +111,7 @@
           m = checkTime(m);
           s = checkTime(s);
           M = checkAMPM(h);
+					h = checkHour(h);
           document.getElementById('time').innerHTML = h + ":" + m + ":" + s + " " + M;
           var t = setTimeout(startTime, 500);
       }
@@ -128,6 +129,17 @@
         };
         return M;
       }
+			function checkHour(k){
+				if (k>12){
+					k = k - 12
+				}else{
+					k = k
+					if (k < 10) {
+						k = "0" + k
+					}
+				};
+				return k;
+			}
     </script>
   </head>
   <body onload="startTime()">
