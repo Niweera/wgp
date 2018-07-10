@@ -53,7 +53,7 @@
 		?>  
 
 		<!--the page contain the links to other admin functions Create, Update and Delete-->
-      	<div class ="center">
+      	<div class ="cen">
 			<h1>User Authentication</h1>
 			<a href="create.php"><button type="button"><img src="../homefiles/create.png">Create profile</button></a><br><br>
 			<a href="delete.php"><button type="button"><img src="../homefiles/delete-user-512.png">Delete profile</button></a><br><br>
