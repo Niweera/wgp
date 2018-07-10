@@ -39,6 +39,7 @@
 				color: black;
 				padding: 15px 0px;
 				text-decoration: none;
+				font-weight: bold;
 				display: inline-block;
 				font-size: 16px;
 				margin: 10px 10px 10px 10px;
