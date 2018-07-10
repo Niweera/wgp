@@ -20,7 +20,7 @@
 				
 				if(password_verify($password,$row['Password']))
 				{
-					$_SESSION['user_id'] = $row['CuID'];
+					$_SESSION['user_id'] = $row['CustID'];
 					$_SESSION['first_name'] = $row['FirstName'];
 					$_SESSION['last_name'] = $row['LastName'];
 					$_SESSION['email'] = $row['Email'];
