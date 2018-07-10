@@ -55,8 +55,8 @@
 		<!--the page contain the links to other admin functions Create, Update and Delete-->
       	<div class ="cen">
 			<h1>User Authentication</h1>
-			<a href="create.php"><button type="button"><img src="../homefiles/create.png">Create profile</button></a><br><br>
-			<a href="delete.php"><button type="button"><img src="../homefiles/delete-user-512.png">Delete profile</button></a><br><br>
+			<a href="create.php"><button type="button"><img src="../homefiles/create.png">Create profile</button></a>
+			<a href="delete.php"><button type="button"><img src="../homefiles/delete-user-512.png">Delete profile</button></a>
 			<a href="edit.php"><button type="button"><img src="../homefiles/edit.png">Edit profile</button></a>
 		</div>
 		<footer>
