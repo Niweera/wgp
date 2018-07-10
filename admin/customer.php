@@ -34,26 +34,31 @@
 			}
 
 			button {
-				background-color: #333333; 
+				background-color: #acb4c1; 
 				border: none;
-				color: white;
+				color: black;
 				padding: 15px 0px;
-				text-align: center;
 				text-decoration: none;
 				display: inline-block;
 				font-size: 16px;
 				margin: 10px 10px 10px 10px;
-				border-radius:5px;
+				border-radius: 12px;
 				width: 140px;
+				height: 140px;
 			}
-			.center {
+			.cen {
 				margin: auto ;
 				margin-top: 15px;
 				width: 50%;
 				padding: 10px;
-				text-align: center;
-				border: 2px solid grey;
-				background-color: #c6cbd3;
+				text-align: center;	
+			}
+			img {
+				height: 50px;
+				width: 50px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		</style>
 	</head>
@@ -76,10 +81,10 @@
 
 				<!--the page views the customer database-->
 				<h1 style="text-align:center;">Customer Database</h1>
-				<div class ="center" style="padding-right:0px">
+				<div class ="cen" style="padding-right:0px">
 					<form method="post" action="customer.php">
-						<button type="submit" name="sub">View Customers</button>
-						<button type="submit" name="sub2">View Messages</button><br>
+						<button type="submit" name="sub"><img src="../homefiles/search.png">View Customers</button>
+						<button type="submit" name="sub2"><img src="../homefiles/msg.png">View Messages</button><br>
 					</form>
 				</div>
 				<br><br>
