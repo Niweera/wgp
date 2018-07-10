@@ -154,7 +154,8 @@
           <p style="font-size:38px;margin-top:50px;margin-bottom:10px">Today is:</p>
 					<?php 
 						date_default_timezone_set("Asia/Colombo");
-						echo "<p style=\"font-size:38px;margin:0px\">" .date("l").", ".date("d/m/Y")."</p>";
+						echo date_default_timezone_get();
+						echo "<p style=\"font-size:38px;margin:0px\">" .date("l").",".date("d/m/Y")."</p>";
 					?>
           <p id="time" style="font-size:38px;margin-top:10px"></p>
 				</div>
