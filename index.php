@@ -109,6 +109,13 @@
 									if(!isset($_SESSION['user_id'])){
 										echo '<a class="active" href="./">Home</a>';
 									}else{
+										$admin = $_SESSION['user_id'];
+										$sql = "SELECT AdminID FROM admin WHERE AdminID='$admin';";
+										$result=mysqli_query($conn,$sql);
+										$queryResult=mysqli_num_rows($result);
+										if ($queryResult == 1){
+											echo '<a href="./admin">Admin Home</a>';	 	
+										}
 										echo '<a href="./user">Customer Home</a>';
 									}			
 								?>
