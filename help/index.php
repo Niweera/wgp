@@ -7,6 +7,7 @@
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Help</title>
+    <link rel="icon" href="../homefiles/fav.png">
 		<link rel="stylesheet" type="text/css" href="../main.css">
 		<link rel="stylesheet" type="text/css" href="../style.css">
     <style>

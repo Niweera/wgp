@@ -6,6 +6,7 @@
 <html>
 	<head>
 		<title>Sign Up</title>
+		<link rel="icon" href="../homefiles/fav.png">
 		<link rel="stylesheet" type="text/css" href="../about/style.css">
 		<style>
 			footer {

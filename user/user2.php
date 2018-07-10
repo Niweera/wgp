@@ -13,6 +13,7 @@
 <html>
 	<head>
 		<title>Find Technician</title>
+		<link rel="icon" href="../homefiles/fav.png">
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>

@@ -85,6 +85,7 @@
 <html>
 	<head>
 		<title>Login</title>
+		<link rel="icon" href="../homefiles/fav.png">
 		<link rel="stylesheet" type="text/css" href="../about/style.css">
 		<link rel="stylesheet" type="text/css" href="./stylelogin.css">
 		<style>

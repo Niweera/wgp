@@ -7,6 +7,7 @@
 <html>
 	<head>
 	<title>About Us</title>
+	<link rel="icon" href="../homefiles/fav.png">
 	<link rel="stylesheet" type="text/css" href="./main.css">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	</head>
