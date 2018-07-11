@@ -89,7 +89,7 @@
 				<?php 
 					if (null !==(filter_input(INPUT_POST, 'sub2'))){ 
 						
-						$sql = "SELECT skill.SkillName, COUNT(skillcount.skid) AS count FROM skillcount INNER JOIN skill ON (skillcount.skid = skill.SkID) GROUP BY skillcount.skid;";
+						$sql = "SELECT skill.SkillName, COUNT(skillcount.skid) AS count FROM skillcount INNER JOIN skill ON (skillcount.skid = skill.SkID) GROUP BY skillcount.skid ORDER BY count DESC;";
 						$result=mysqli_query($conn,$sql);
 						$queryResult=mysqli_num_rows($result);
 						if ($queryResult > 0){
@@ -110,7 +110,7 @@
 					}
 				
 					if (null !==(filter_input(INPUT_POST, 'sub'))){
-						$sql = "SELECT techtype.typename, COUNT(techcount.techid) AS count FROM techcount INNER JOIN techtype ON (techcount.techid = techtype.typeid) GROUP BY techcount.techid;";
+						$sql = "SELECT techtype.typename, COUNT(techcount.techid) AS count FROM techcount INNER JOIN techtype ON (techcount.techid = techtype.typeid) GROUP BY techcount.techid ORDER BY count DESC;";
 						$result=mysqli_query($conn,$sql);
 						$queryResult=mysqli_num_rows($result);
 						if ($queryResult > 0){
