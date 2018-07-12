@@ -58,7 +58,7 @@
 				margin: auto;
 				margin-top: 15px;
 				margin-bottom: 15px;
-				width: 70%;
+				width: 50%;
 				padding: 10px;
 				text-align: center;
 				border: 2px solid grey;
@@ -66,7 +66,7 @@
 				
 			}
 			.form_content input{
-				width: 60%;
+				width: 95%;
 				padding: 7px 20px;
 				margin: 8px 12px;
 				box-sizing: border-box;
