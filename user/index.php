@@ -81,7 +81,7 @@
 				color: #fff;
 				background-color: #333333;
 				border-color: #ffffff;
-				margin-right: 44px;
+				margin-right: 25px;
 				padding: 10px 24px;
 			}
 			.containera:link {
