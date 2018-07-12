@@ -20,12 +20,12 @@
 				
 				if(password_verify($password,$row['Password']))
 				{
+					session_start();
 					$_SESSION['user_id'] = $row['CustID'];
 					$_SESSION['first_name'] = $row['FirstName'];
 					$_SESSION['last_name'] = $row['LastName'];
 					$_SESSION['email'] = $row['Email'];
-					
-					
+					$_SESSION['ContactNo'] = $row['ContactNo'];
 					header('location: ../user');
 					exit;
 					
@@ -195,8 +195,8 @@
 						<input type="text" name="email" placeholder="Enter Email" class="answers" required>
 						<p>Password</p>
 						<input type="password" name="password" placeholder="Enter Password" class="answers" required>
-						<input type="submit" name="submit" value="Customer Login" class="login"><br>
-						<input type="submit" name="submit2" value="Admin Login" class="login"><br>
+						<input type="submit" name="submit" style="cursor: pointer;" value="Customer Login" class="login"><br>
+						<input type="submit" name="submit2" style="cursor: pointer;" value="Admin Login" class="login"><br>
 						<a href="../signup" class="havent">Don't have an account?</a>
 					</form>	
 				</div>
