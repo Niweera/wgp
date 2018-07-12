@@ -10,6 +10,28 @@
 		<link rel="icon" href="../homefiles/fav.png">
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
+		<style>
+			img.foot {
+				width: 38px;
+				height: 38px;
+				display : inline;
+				margin-top: -5px;
+				margin-right: 5px;
+			}
+			.footerright a {
+				float: left;
+				color: white;
+				text-align: center;
+				padding-bottom: 0px;
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-decoration: none;
+				font-size: 15px;
+				line-height: 25px;
+				border-radius: 4px;
+			}
+		</style>
 	</head>
 	<body> 
 		<div class="content">
@@ -96,9 +118,9 @@
 		<footer class="stickyfooter">
 			<p class="footerleft" style="margin-top:0;margin-bottom:0px;color:white"> &copy; Find Lanka Incorporated. 2018 | All Rights Reserved.</p>
 			<div class="footerright">
-				<a href="#home">Link 1</a>
-				<a href="#about">Link 2</a>
-				<a href="#contact">Link 2</a>
+				<a href="https://www.facebook.com/"><img src="../homefiles/facebook.png" class="foot"></a>
+				<a href="https://twitter.com/"><img src="../homefiles/twitter.png" class="foot"></a>
+				<a href="https://www.linkedin.com"><img src="../homefiles/linkedin.png" class="foot"></a>
 			</div>
 			<div style="clear: both"></div>
 		</footer>
