@@ -121,7 +121,7 @@
 								$cont = $row['ContactNo'];
 								echo "<tr><td>".$uname."</td><td>".$first."</td><td>".$last."</td><td>".$email."</td><td>".$cont."</td></tr>";    
 								}
-						echo "</table>";}
+						echo "</table><br><br>";}
 					}
 
 					if (null !==(filter_input(INPUT_POST, 'sub2'))){
@@ -138,7 +138,7 @@
 								$note = $row['note'];
 								echo "<tr><td>".$name."</td><td>".$subject."</td><td>".$email."</td><td>".$note."</td></tr>";    
 								}
-						echo "</table>";}				
+						echo "</table><br><br>";}				
 					}			
 				?>		
 			</div>
