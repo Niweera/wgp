@@ -86,11 +86,41 @@
 							echo "</select><br><br>";
 						?>
 						
-						Skill:
+						Skill 1:
 						<?php 
 							$result = $conn->query("select SkID, SkillName from skill");	
-							echo "<select name=\"skid\" style=\"margin-left:100px\">";
-							echo '<option value="">Leave empty for admin</option>';
+							echo "<select name=\"skid1\" style=\"margin-left:85px\">";
+							echo '<option value="">Select Skill 1</option>';
+							
+							while ($row = $result->fetch_assoc()) {
+								unset($id, $name);
+								$id = $row['SkID'];
+								$name = $row['SkillName']; 
+								echo '<option value="'.$id.'">'.$name.'</option>'; 
+							}
+							echo "</select><br><br>";
+						?>
+
+						Skill 2:
+						<?php 
+							$result = $conn->query("select SkID, SkillName from skill");	
+							echo "<select name=\"skid2\" style=\"margin-left:85px\">";
+							echo '<option value="">Select Skill 2 (if any)</option>';
+							
+							while ($row = $result->fetch_assoc()) {
+								unset($id, $name);
+								$id = $row['SkID'];
+								$name = $row['SkillName']; 
+								echo '<option value="'.$id.'">'.$name.'</option>'; 
+							}
+							echo "</select><br><br>";
+						?>
+
+						Skill 3:
+						<?php 
+							$result = $conn->query("select SkID, SkillName from skill");	
+							echo "<select name=\"skid3\" style=\"margin-left:85px\">";
+							echo '<option value="">Select Skill 3 (if any)</option>';
 							
 							while ($row = $result->fetch_assoc()) {
 								unset($id, $name);
@@ -152,19 +182,46 @@
         $password = filter_input(INPUT_POST,'pw');
         $ocp = filter_input(INPUT_POST,'ocp');
         $city = filter_input(INPUT_POST,'city');
-		$skill = filter_input(INPUT_POST,'skid');
+		$skill1 = filter_input(INPUT_POST,'skid1');
+		$skill2 = filter_input(INPUT_POST,'skid2');
+		$skill3 = filter_input(INPUT_POST,'skid3');
 		$rate = filter_input(INPUT_POST,'rate');
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-      
+		
+		
 		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Password,Occupation,City,Rate) VALUES ('$uname','$fname','$lname','$email','$cont','$hashed_password','$ocp','$city','$rate');";
-		$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill');";
-		$mysqli_query = mysqli_multi_query($conn, $sql2);
+		
+		if ($skill1 != "" && $skill2 != "" && $skill3 != ""){	
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill1');";
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill2');";
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill3');";
+			$mysqli_query = mysqli_multi_query($conn, $sql2);
      
-		if (!$mysqli_query){
+			if (!$mysqli_query){
+					echo "<script>alert(\"Error Occured!\");</script>";
+				}else {
+					echo "<script>alert(\"Successfully registered!\");</script>";
+				}	
+		}elseif ($skill1 != "" && $skill2 != "" && $skill3 == ""){	
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill1');";
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill2');";
+			$mysqli_query = mysqli_multi_query($conn, $sql2);
+     
+			if (!$mysqli_query){
 					echo "<script>alert(\"Error Occured!\");</script>";
 				}else {
 					echo "<script>alert(\"Successfully registered!\");</script>";
 				}
+		}elseif ($skill1 != "" && $skill2 == "" && $skill3 == ""){	
+			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill1');";
+			$mysqli_query = mysqli_multi_query($conn, $sql2);
+     
+			if (!$mysqli_query){
+					echo "<script>alert(\"Error Occured!\");</script>";
+				}else {
+					echo "<script>alert(\"Successfully registered!\");</script>";
+				}	
+		}
   	}
     $mysqli_close = mysqli_close($conn);
 ?>   
