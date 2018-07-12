@@ -103,6 +103,19 @@
 				margin-top: -5px;
 				margin-right: 5px;
 			}
+			.footerright a {
+				float: left;
+				color: white;
+				text-align: center;
+				padding-bottom: 0px;
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-decoration: none;
+				font-size: 15px;
+				line-height: 25px;
+				border-radius: 4px;
+			}
 		</style>
 	</head>
 	<body>
