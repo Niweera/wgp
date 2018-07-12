@@ -158,7 +158,7 @@
         <!--this is the admin's homepage this homepage should contain details of admin-->
         <div class="container">
 					<img src="../homefiles/admin.svg" style="width:500px;height:500px" alt="Workers"/>
-					<p style="font-size:45px;font-wight:bold;margin-bottom:10px;margin-top:100px">Welcome, Administrator.</p>
+					<p style="font-size:45px;font-wight:bold;margin-bottom:10px;margin-top:100px">Welcome, <?php echo $_SESSION['first_name']." ".$_SESSION['last_name']; ?>.</p>
           <p style="font-size:38px;margin:0px">What would you like to do today?</p>
           <p style="font-size:38px;margin-top:50px;margin-bottom:10px">Today is:</p>
 					<?php 
