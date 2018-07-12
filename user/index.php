@@ -17,14 +17,23 @@
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
-			table {
-				border-collapse: collapse;
-				border-spacing: 0;
-				width: 90%;
-				border: 1px solid #ddd;
-				margin-left: 50px;
+			.container {
+				border: 2px solid #ccc;
+				background-color: #eee;
+				border-radius: 5px;
+				padding: 16px;
+				margin: 16px;
 			}
-
+			.container img {
+				float: left;
+				margin-right: 20px;
+				border-radius: 10%;
+			}
+			.container::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
 			th, td {
 				text-align: left;
 				padding: 16px;
@@ -44,9 +53,105 @@
 				padding-right: 0;
 				border: 1px solid grey;
 			}
+            .form_content{
+				text-align: center;
+				margin: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				width: 70%;
+				padding: 10px;
+				text-align: center;
+				border: 2px solid grey;
+				background-color: #c6cbd3;
+				
+			}
+			.form_content input{
+				width: 60%;
+				padding: 7px 20px;
+				margin: 8px 12px;
+				box-sizing: border-box;
+				border: 2px solid #8c8585;
+				border-radius: 4px;
+			}
+
+			.form_content button {
+				height:45px;
+				width:150px;
+				float: right;
+				color: #fff;
+				background-color: #333333;
+				border-color: #ffffff;
+				margin-right: 44px;
+				padding: 10px 24px;
+			}
+			.containera:link {
+				color: white;
+				text-decoration: none;
+				background-color: #7f858e;
+				display: inline-block;
+				padding: 5px 5px;
+				border-radius:4px;
+			}
+			.containera:visited {
+				color: white;
+				text-decoration: none;
+				background-color: #7f858e;
+				display: inline-block;
+				padding: 5px 5px;
+				border-radius:4px;
+			}
+			.containera:hover {
+				color: black;
+				text-decoration: none;
+				background-color: red;
+			}
+			.containera:active {
+				color: black;
+				text-decoration: none;
+				background-color: red;
+			}
 		</style>
+		<script>
+      function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          M = checkAMPM(h);
+					h = checkHour(h);
+          document.getElementById('time').innerHTML = h + ":" + m + ":" + s + " " + M;
+          var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {
+            i = "0" + i
+          };  
+          return i;
+      }
+      function checkAMPM(j){
+        if (j>=12){
+          M = "PM"
+        }else{
+          M = "AM"
+        };
+        return M;
+      }
+			function checkHour(k){
+				if (k>12){
+					k = k - 12
+				}else{
+					k = k
+				};
+				if (k < 10) {
+						k = "0" + k
+				};
+				return k;
+			}
+    </script>
 	</head>
-	<body>
+	<body onload="startTime()">
 		<div class="content">
 			<div class="content-inside" style="text-align:center">
 				<header>
@@ -78,24 +183,85 @@
 				</header>
 
 				<!--this is the landing page of the customer-->
-
-				<h1 style="text-align:center;">This is the customer's homepage</h1>
-				<h1 style="text-align:center;">The following is just a filler, it needs to be changed</h1>
-				<div class="one size style">
-					<p>This is a web platform as a solution for  day to day domestic issue we all come across in our busy lives.<br><br><br> In the city of Colombo and suburban areas , finding a plumber to fix a plumbing issue in your house is as hard as finding a needle in a haystack.<br><br><br> And this scarcity extends to all types of skilled workers such as carpenters, electricians and etc.<br><br><br>People who look for services of skilled workers can not find them easily.<br><br><br>  And skilled workers who provide these services can not find work. And we are here to build up a bridge to satisfy the requirements of the both parties.<hr>
-						
-					</p>
-
-					<p class="form">Here we provide you an online technical support system to search for best service providers in need, indeed.</p>
+				<div class="container">
+					<img src="../homefiles/user.svg" style="width:500px;height:500px" alt="Workers"/>
+					<p style="font-size:45px;font-wight:bold;margin-bottom:50px;margin-top:0px">Welcome, <?php echo $_SESSION['first_name']." ".$_SESSION['last_name']; ?>.</p>
+					<p style="font-size:32px;margin:0px">You can search for technicians by clicking <a class="containera" style="margin-left: 5px" href="../user/user.php">here</a>!</p>
+          			<p style="font-size:32px;margin-top:20px;margin-bottom:10px">Today is:</p>
+					<?php 
+						date_default_timezone_set("Asia/Colombo");
+						echo "<p style=\"font-size:32px;margin:0px\">".date("l").","." ".date("d/m/Y")." "."<span id=\"time\" style=\"font-size:32px;margin-left:5px\"></span></p>";
+						echo "<br><br>";
+					?>
+          			
+					<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+						<label for="submit" style="font-size:35px"><b>To View your profile or to edit:</b></label>
+						<button type="submit" name="view" style="font-size:35px;padding: 15px 10px">Click Here</button>
+					</form>
 				</div>
-				<div class="one size style">
-					<p>This is a web platform as a solution for  day to day domestic issue we all come across in our busy lives.<br><br><br> In the city of Colombo and suburban areas , finding a plumber to fix a plumbing issue in your house is as hard as finding a needle in a haystack.<br><br><br> And this scarcity extends to all types of skilled workers such as carpenters, electricians and etc.<br><br><br>People who look for services of skilled workers can not find them easily.<br><br><br>  And skilled workers who provide these services can not find work. And we are here to build up a bridge to satisfy the requirements of the both parties.<hr>
-						
-					</p>
-
-					<p class="form">Here we provide you an online technical support system to search for best service providers in need, indeed.</p>
-				</div>
+				<div style="clear: both"></div>
 				
+
+				<?php
+					if (isset($_POST['view'])){
+						$cuid = $_SESSION['cuid'];
+						$sql = "SELECT CustID, FirstName, LastName, ContactNo, Email FROM Customer WHERE CuID='$cuid';";
+						$result=mysqli_query($conn,$sql);
+						$queryResult=mysqli_num_rows($result);
+						if ($queryResult == 1){
+							while ($row=mysqli_fetch_assoc($result)){
+								$uname = $row['CustID'];
+								$fname = $row['FirstName'];
+								$lname = $row['LastName'];
+								$cont = $row['ContactNo'];
+								$email = $row['Email'];
+							}
+						}	
+						echo '<div class="form_content">';
+						echo '<form action="./index.php" method="post">';
+                        echo '<input type="number" value="'.$_SESSION['cuid'].'" name="custID" hidden>';
+                        echo '<table align="center">';
+                        echo '<tr>';
+                        echo '<td width=20%>';
+                        echo '<label for="first_name"><b>First Name:</b></label>';
+                        echo '</td><td width=60%>';
+                        echo '<input type="text" id="chn" readonly="readonly"  name="fname" value="'.$fname.'"><br>';
+                        echo '</td>';
+                        echo '</tr>';
+                    	echo '<tr>';
+                        echo '<td>';
+                    	echo '<label for="last_name"><b>Last Name:</b></label>';
+                        echo '</td><td>';
+                    	echo '<input type="text" id="change" readonly="readonly"  name="lname" value="'.$lname.'"><br>';
+                        echo '</td>';
+                        echo '</tr>';
+                        echo '<tr>';
+                        echo '<td>';
+                        echo '<label for="email"><b>Email Address:</b></label>';
+                        echo '</td><td>';
+                        echo '<input type="text" id="change1" readonly="readonly"  name="email" value="'.$email.'" ><br>';
+                        echo "</td>";
+                        echo '</tr>';
+                        echo '<tr>';
+                        echo '<td>';
+                        echo '<label for="contact_no"><b>Contact No:</b></label><br>';
+                        echo '</td><td>';
+                        echo '<input type="number" id="chng" readonly="readonly"  name="contact" value="'.$cont.'"><br>';
+                        echo '</td>';
+                        echo '</tr>';
+						echo '<tr>';
+						echo '<td align="center">';
+						echo "<button class=\"e1\" type=\"button\" onclick=\"myFunction()\" style=\"cursor: pointer;\" >Edit</button>";	
+						echo '</td>';
+						echo '<td align="center">';
+						echo '<button class="s1 save" type="submit" name="submit" style="cursor: pointer;">Save</button>';
+						echo '</td>';
+						echo '</tr>';
+						echo '</table>';
+                    	echo '</form>';
+						echo '</div>';
+					}
+				?>
 				
 				
 			</div>
@@ -110,8 +276,34 @@
 			</div>
 			<div style="clear: both"></div>
 		</footer>
+        <script>
+        document.getElementsByClassName('save')[0].style.visibility = 'hidden';
+        function myFunction(){
+            document.getElementsByClassName('save')[0].style.visibility = 'visible';
+            document.getElementById('change').readOnly =false;
+           // document.getElementById('change1').readOnly =false;
+            document.getElementById('chng').readOnly =false;
+            document.getElementById('chn').readOnly =false;
+        }
+        </script>
 	</body>
 </html>
 
-
+<?php
+	if (isset($_POST['submit'])){
+		$id = $_POST['custID'];
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$email = $_POST['email'];
+		$contactNumber = $_POST['contact'];
+	
+		$sql = "UPDATE customer SET FirstName='$fname', LastName='$lname', ContactNo=$contactNumber WHERE CuID=$id";
+		if (mysqli_query($conn, $sql)) {
+			echo "<script>alert(\"Successfully Updated!\");</script>";
+		} else {
+			echo "<script>alert(\"Error Occured!\");</script>";
+			
+		}
+	}	
+?>
 

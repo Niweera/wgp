@@ -21,6 +21,7 @@
 				if(password_verify($password,$row['Password']))
 				{
 					session_start();
+					$_SESSION['cuid'] = $row['CuID'];
 					$_SESSION['user_id'] = $row['CustID'];
 					$_SESSION['first_name'] = $row['FirstName'];
 					$_SESSION['last_name'] = $row['LastName'];
