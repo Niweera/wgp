@@ -29,7 +29,7 @@
 				background-color: #caccce;
 			}
 
-			button {
+			.button1 {
 				background-color: #acb4c1; 
 				border: none;
 				color: black;
@@ -43,6 +43,10 @@
 				width: 140px;
 				height: 140px;
 			}
+			.button1:hover {
+					background-color: #d9dde2;
+					color: black;
+				}
 			.cen {
 				margin: auto ;
 				margin-top: 15px;
@@ -100,8 +104,8 @@
 				<h1 style="text-align:center;">Customer Database</h1>
 				<div class ="cen" style="padding-right:0px">
 					<form method="post" action="customer.php">
-						<button type="submit" name="sub"><img src="../homefiles/search.png">View Customers</button>
-						<button type="submit" name="sub2"><img src="../homefiles/msg.png">View Messages</button><br>
+						<button type="submit" name="sub" class="button1"><img src="../homefiles/search.png">View Customers</button>
+						<button type="submit" name="sub2" class="button1"><img src="../homefiles/msg.png">View Messages</button><br>
 					</form>
 				</div>
 				<br><br>
