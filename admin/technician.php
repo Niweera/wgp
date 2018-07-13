@@ -145,19 +145,20 @@
 						}
 						
 						else{
-							$sql = "SELECT TechID, FirstName, LastName, Email, ContactNo FROM technician WHERE Occupation='$occupation';";
+							$sql = "SELECT TechID, FirstName, LastName, Email, ContactNo, City FROM technician WHERE Occupation='$occupation';";
 							$result=mysqli_query($conn,$sql);
 							$queryResult=mysqli_num_rows($result);
 							if ($queryResult > 0){
 								echo "<table>";
-								echo "<tr><th>TechID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>ContactNo</th></tr>";
+								echo "<tr><th>TechID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>ContactNo</th><th>City</th></tr>";
 								while ($row=mysqli_fetch_assoc($result)){
 									$uname = $row['TechID'];
 									$first = $row['FirstName'];
 									$last = $row['LastName'];
 									$email = $row['Email'];
 									$cont = $row['ContactNo'];
-									echo "<tr><td>".$uname."</td><td>".$first."</td><td>".$last."</td><td>".$email."</td><td>".$cont."</td></tr>";    
+									$city = $row['City'];
+									echo "<tr><td>".$uname."</td><td>".$first."</td><td>".$last."</td><td>".$email."</td><td>".$cont."</td><td>".$city."</td></tr>";    
 								}
 								echo "</table>"; 
 								echo "<br>";
