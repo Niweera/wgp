@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="./main.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<style>
-			button {
+			.button1 {
 				background-color: #acb4c1; 
 				border: none;
 				color: black;
@@ -26,6 +26,10 @@
 				width: 140px;
 				height: 140px;
 			}
+			.button1:hover {
+					background-color: #d9dde2;
+					color: black;
+				}
 			.cen {
 				margin: auto ;
 				margin-top: 15px;
@@ -72,9 +76,9 @@
 		<!--the page contain the links to other admin functions Create, Update and Delete-->
       	<div class ="cen">
 			<h1>User Authentication</h1>
-			<a href="create.php"><button type="button"><img src="../homefiles/create.png">Create profile</button></a>
-			<a href="delete.php"><button type="button"><img src="../homefiles/delete-user-512.png">Delete profile</button></a>
-			<a href="edit.php"><button type="button"><img src="../homefiles/edit.png">Edit profile</button></a>
+			<a href="create.php"><button type="button" class="button1"><img src="../homefiles/create.png">Create profile</button></a>
+			<a href="delete.php"><button type="button" class="button1"><img src="../homefiles/delete-user-512.png">Delete profile</button></a>
+			<a href="edit.php"><button type="button" class="button1"><img src="../homefiles/edit.png">Edit profile</button></a>
 		</div>
 		<footer>
 			<div class="footer" style="position:fixed">
