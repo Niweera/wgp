@@ -183,7 +183,7 @@
 				</div>
 				<div class="container">
 					<img style="float:right;margin-right:0px;margin-left:15px;width:600px;height:400px" src="./homefiles/w3.jpg" alt="OneMinute"/>
-					<p style="font-size:38px;text-align:center">For technicians,<br> please contact our office for listing your services in our web site.<br> Within one day you can be listed on our website and start getting job orders...<br><a class="containera" style="margin-top: 20px;" href="../about/contact support.php" target="blank">Contact Us</a></p>
+					<p style="font-size:38px;text-align:center">For technicians,<br> please contact our office for listing your services in our web site.<br> Within one day you can be listed on our website and start getting job orders...<br><a class="containera" style="margin-top: 20px;" href="./about/contact support.php" target="blank">Contact Us</a></p>
 				</div>
 				<div style="clear: both"></div>
 				<?php
