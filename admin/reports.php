@@ -115,7 +115,7 @@
 						if ($queryResult > 0){
 							echo "<br/><p style=\"font-size:18px;text-align:center\">Here are the searched technical issues with their count.</p>";					
 							echo "<table>";
-							echo "<tr><th>Skill Name</th><th>Searched count</th></tr>";
+							echo "<tr><th>Name of the issue</th><th>Searched count</th></tr>";
 							while ($row=mysqli_fetch_assoc($result)){
 								$sname = $row['SkillName'];
 								$count = $row['count'];

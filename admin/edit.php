@@ -209,8 +209,10 @@
 		$lname = filter_input(INPUT_POST,'lname');
 		$cont = filter_input(INPUT_POST,'cont');
 		$email = filter_input(INPUT_POST,'email');
+		$pw = filter_input(INPUT_POST,'pw');
+		$pwh = password_hash($pw, PASSWORD_DEFAULT);
 		
-		$sql = "UPDATE customer SET FirstName='$fname', LastName='$lname',Email='$email',ContactNo='$cont' WHERE CustID='$uname';";
+		$sql = "UPDATE admin SET FirstName='$fname', LastName='$lname',Email='$email',ContactNo='$cont', Password='$pwh' WHERE AdminID='$uname';";
 
 		$mysqli_query = mysqli_query($conn, $sql);
 	

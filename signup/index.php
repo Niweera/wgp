@@ -191,32 +191,8 @@
                     echo "<script>alert(\"Error Occured!\");</script>";
                 }else {
                     $tvidr = mysqli_insert_id($conn); 
-                    echo "<script>alert(\"Successfully registered!\");</script>";
+					echo "<script>alert(\"Successfully registered!\");</script>";
                 }
     }
-    
-    if (null !==(filter_input(INPUT_POST, 'submit2'))){
-        $uname = filter_input(INPUT_POST,'uname');
-        $fname = filter_input(INPUT_POST,'fname');
-        $lname = filter_input(INPUT_POST,'lname');
-        $cont = filter_input(INPUT_POST,'cont');
-        $email = filter_input(INPUT_POST,'email');
-        $password = filter_input(INPUT_POST,'pw');
-        $ocp = filter_input(INPUT_POST,'ocp');
-        $city = filter_input(INPUT_POST,'city');
-		$skill = filter_input(INPUT_POST,'skid');
-		$rate = filter_input(INPUT_POST,'rate');
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-      
-		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Password,Occupation,City,Rate) VALUES ('$uname','$fname','$lname','$email','$cont','$hashed_password','$ocp','$city','$rate');";
-		$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill');";
-		$mysqli_query = mysqli_multi_query($conn, $sql2);
-     
-		if (!$mysqli_query){
-					echo "<script>alert(\"Error Occured!\");</script>";
-				}else {
-					echo "<script>alert(\"Successfully registered!\");</script>";
-				}
-  	}
     $mysqli_close = mysqli_close($conn);
 ?>   
