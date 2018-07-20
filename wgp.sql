@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('chinthakar','chinthaka','chinthaka@gmail.com','$2y$10$mlF/WcvFJO.ybl0uwSl6tOeDwXdT7V1b.KBq7v3UEHRDM4QfDjS7u','rohan',778547856),('Niweera','Nipuna','z','$2y$10$nBu8DpzMRlwiaezcOAg.lOEn9ubSmkPVWxneE3kkRuTykCOvXMFGW','Weerasekara',766419486),('Niweera2','Nipuna','a','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC','Weerasekara',766419486);
+INSERT INTO `admin` VALUES ('chinthakar','chinthaka','chinthaka@gmail.com','$2y$10$mlF/WcvFJO.ybl0uwSl6tOeDwXdT7V1b.KBq7v3UEHRDM4QfDjS7u','rohan',778547856),('Niweera','Nipuna','z','$2y$10$nBu8DpzMRlwiaezcOAg.lOEn9ubSmkPVWxneE3kkRuTykCOvXMFGW','Weerasekara',766419486),('Niweera2','Nipuna','a','$2y$10$dMVTJunsoRXY24NRvqT.6OVD3c70KeSM/F/EHIvfakT1WEw00iRYC','Weerasekara',766419486),('UCSC_Admin','UCSC','ucscadmin','$2y$10$5tMwBLLT46WowTUm9ToRs.NxKJ5gLDeEzs8nXSc6KAYmQsh14nNdS','Administrator',123456789);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,4 +321,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-19 14:58:40
+-- Dump completed on 2018-07-20 20:57:10
