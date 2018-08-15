@@ -136,53 +136,34 @@
 				<form action="edit.php" method="post">
 					<div class="center" style="text-align:center">
 						<h3 style="text-align:center;">Enter Details to change</h3>
-						User Name: <input type="text" name="uname" value="" style="margin-left:50px" required/><br><br>
-						First Name: <input type="text" name="fname" value="" style="margin-left:50px" required/><br><br>
-						Last Name: <input type="text" name="lname" value="" style="margin-left:50px" required/><br><br>
-						Contact Number: <input type="text" name="cont" value="" required/><br><br>
-						Email: <input type="text" name="email" value="" style="margin-left:90px" required/><br><br>
+						User Name: <input type="text" name="uname" style="margin-left:50px" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $uname;}?>" required/><br><br>
+						First Name: <input type="text" name="fname" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $fname;}?>" style="margin-left:50px" required/><br><br>
+						Last Name: <input type="text" name="lname" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $lname;}?>" style="margin-left:50px" required/><br><br>
+						Contact Number: <input type="text" name="cont" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $cont;}?>" required/><br><br>
+						Email: <input type="text" name="email" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $email;}?>" style="margin-left:90px" required/><br><br>
 						Password: <input type="password" placeholder="Leave empty for technician" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();'/><br><br>
 						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px"/><br> 
   						<span id='message' style="margin-left:120px"></span><br>
 						City: 
 						<!--these kinds of select statements should be changed into php to auto populate-->
 						<?php 
-							$result = $conn->query("select cityname from city");	
-							echo "<select name=\"city\" style=\"margin-left:102px\">";
-							echo '<option value="">Leave empty for admin</option>';
-							while ($row = $result->fetch_assoc()) {
-								unset($id, $name);
-								$name = $row['cityname']; 
-								echo '<option value="'.$name.'">'.$name.'</option>'; 
+							
+							if(isset($_POST['sub2'])){
+								$result = $conn->query("select cityname from city");	
+								echo "<select name=\"city\" style=\"margin-left:102px\">";
+								echo '<option value="'.$city.'">'.$city.'</option>';
+								while ($row = $result->fetch_assoc()) {
+									unset($id, $name);
+									$name = $row['cityname']; 
+									echo '<option value="'.$name.'">'.$name.'</option>'; 
+								}
+							}else{
+								echo "<select name=\"city\" style=\"margin-left:102px\">";
+								echo '<option value="">Leave empty for admin</option>';
 							}
 							echo "</select><br><br>";
 						?>
-						Occupation:
-						<?php 
-							$result = $conn->query("select typename from techtype");	
-							echo "<select name=\"ocp\" style=\"margin-left:48px\">";
-							echo '<option value="">Leave empty for admin</option>';
-							while ($row = $result->fetch_assoc()) {
-								unset($id, $name);
-								$name = $row['typename']; 
-								echo '<option value="'.$name.'">'.$name.'</option>'; 
-							}
-							echo "</select><br><br>";
-						?>
-						Skill:
-						<?php 
-							$result = $conn->query("select SkID, SkillName from skill");	
-							echo "<select name=\"skid\" style=\"margin-left:100px\">";
-							echo '<option value="">Leave empty for admin</option>';
-							while ($row = $result->fetch_assoc()) {
-								unset($id, $name);
-								$id = $row['SkID'];
-								$name = $row['SkillName']; 
-								echo '<option value="'.$id.'">'.$name.'</option>'; 
-							}
-							echo "</select><br><br>";
-						?>
-						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="" style="margin-left:98px"/><br><br>
+						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="<?php if((isset($_POST['sub2']))){ echo $rate;}?>" style="margin-left:98px"/><br><br>
 						<button type="submit" name="edit" style="width:210px">Change Admin Details</button>
 						<button type="submit" name="edit2" style="width:210px">Change Technician Details</button>
 						
@@ -230,16 +211,13 @@
 		$lname = filter_input(INPUT_POST,'lname');
 		$cont = filter_input(INPUT_POST,'cont');
 		$email = filter_input(INPUT_POST,'email');
-		$ocp = filter_input(INPUT_POST,'ocp');
         $city = filter_input(INPUT_POST,'city');
-		$skill = filter_input(INPUT_POST,'skid');
 		$rate = filter_input(INPUT_POST,'rate');
 
 		
-		$sql = "UPDATE Technician SET FirstName='$fname', LastName='$lname', Email='$email', ContactNo='$cont',Occupation='$ocp', City='$city', Rate='$rate'  WHERE TechID='$uname';";
-		$sql .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill');";
+		$sql = "UPDATE Technician SET FirstName='$fname', LastName='$lname', Email='$email', ContactNo='$cont', City='$city', Rate='$rate'  WHERE TechID='$uname';";
 		
-		$mysqli_query = mysqli_multi_query($conn, $sql);
+		$mysqli_query = mysqli_query($conn, $sql);
 	
 		if (!$mysqli_query){
 					echo "<script>alert(\"Error Occured!\");</script>";
