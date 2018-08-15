@@ -170,8 +170,8 @@
 				</header>
 				<!--this page will include company details of the Find Lanka-->
 				<div class="container">
-					<img src="./homefiles/workers.jpg" alt="Workers"/>
-					<p style="font-size:38px">Looking for technicians?<br> In a rush, but nowhere to find them?<br> You came to THE RIGHT PLACE!<br>Register with us to receive our full services.</p>
+					<img src="./homefiles/workers.jpg" alt="Workers" width="800px"/>
+					<p style="font-size:38px">Looking for technicians?<br> In a rush? nowhere to find them?<br> You came to<br> <b>THE RIGHT PLACE!</b><br>Register with us to receive our full services.</p>
 				</div>
 				<div class="container">
 					<img style="float:right;margin-right:0px;margin-left:15px;width:500px;height:500px" src="./homefiles/w9.jpg" alt="OneMinute"/>
