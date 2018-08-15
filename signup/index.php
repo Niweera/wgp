@@ -136,7 +136,7 @@
 						</div>
 					</div>
 				</header>
-				<!--this form should be broken into two forms, since it is bad practice to add two kinds of users in one form-->
+				
 				<form action="./index.php" method="post">
 					<div class="center" style="text-align:center">
 						<h1 style="text-align: center">Sign Up</h1><hr>

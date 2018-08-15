@@ -131,7 +131,6 @@
 						</div><!--home2 clearfix-->
 					</div><!--text-->
 				</div><!--wrapper-->
-				<!--end edit from here--><!--methanin nathara karanna-->
 			</div>
 		</div>	
 

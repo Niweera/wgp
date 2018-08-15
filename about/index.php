@@ -76,7 +76,7 @@
 			</div>
 		</header>
 
-		<!--edit from here-->
+		
 		<div class = "wrapper">
 			<div class="head-bar">
 				<div class="left-text">
@@ -134,7 +134,7 @@
 				</div><!--home-col-->
 			</div><!--home1 clearfix-->
 		</div><!--wrapper-->
-		<!--end edit from here-->
+		
 
 		<footer>
 			<div class="footer" style="position:relative">

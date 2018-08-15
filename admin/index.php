@@ -175,7 +175,7 @@
               </div>
           </div>
         </header>
-        <!--this is the admin's homepage this homepage should contain details of admin-->
+        
         <div class="container">
 					<img src="../homefiles/admin.svg" style="width:500px;height:500px" alt="Workers"/>
 					<p style="font-size:45px;font-wight:bold;margin-bottom:10px;margin-top:100px">Welcome, <?php echo $_SESSION['first_name']." ".$_SESSION['last_name']; ?>.</p>

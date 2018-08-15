@@ -75,7 +75,7 @@
 			</div>
 		</header>
 		<div class = "wrapper">
-			<!--edit from here-->
+			
 			<form action = "contact support.php" method = "post">
 				<div class = "table-design">
 					<table align=center border= 1>
@@ -121,7 +121,7 @@
 					</table>
 				</div><!--table-design-->
 			</form>
-			<!--end edit from here-->
+			
 		</div><!--wrapper-->
 		<footer>
 			<div class="footer" style="position:fixed">

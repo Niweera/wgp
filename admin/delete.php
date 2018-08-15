@@ -90,7 +90,7 @@
 						$queryResult=mysqli_num_rows($result);
 						if ($queryResult > 0){
 							echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p>";
-							//echo "<div class = \"center\">";
+							
 							echo "<table>";
 							echo "<tr><th>Username</th><th>Contact No</th><th>Email</th></tr>";
 							while ($row=mysqli_fetch_assoc($result)){
@@ -100,7 +100,7 @@
 								echo "<tr><td>".$uname."</td><td>".$cont."</td><td>".$email."</td></tr>";    
 								}
 							echo "</table>";
-							//echo "</div>";
+							
 						}else {
 							echo "<p style=\"text-align:center\">User not available</p>";
 						}
@@ -113,7 +113,7 @@
 						$queryResult=mysqli_num_rows($result);
 						if ($queryResult > 0){
 							echo "<br/><p style=\"font-size:18px;text-align:center\">User is available</p><br/><br/>";
-							//echo "<div class = \"center\">";
+							
 							echo "<table>";
 							echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Contact No</th><th>Email</th><th>Occupation</th><th>City</th></tr>";
 							while ($row=mysqli_fetch_assoc($result)){
@@ -127,7 +127,7 @@
 								echo "<tr><td>".$uname."</td><td>".$fname."</td><td>".$lname."</td><td>".$cont."</td><td>".$email."</td><td>".$ocp."</td><td>".$city."</td></tr>";    
 							}
 							echo "</table>";
-							//echo "</div>";
+							
 							
 						}else {
 							echo "<p style=\"text-align:center\">User not available</p>";

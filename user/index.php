@@ -301,7 +301,7 @@
         function myFunction(){
             document.getElementsByClassName('save')[0].style.visibility = 'visible';
             document.getElementById('change').readOnly =false;
-           // document.getElementById('change1').readOnly =false;
+           
             document.getElementById('chng').readOnly =false;
             document.getElementById('chn').readOnly =false;
         }

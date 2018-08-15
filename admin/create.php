@@ -67,7 +67,7 @@
 				<?php
 					include 'userheader.php';
 				?>
-				<!--this form should be broken into two forms, since it is bad practice to add two kinds of users in one form-->
+				
 				<form action="create.php" method="post">
 					<div class="center" style="text-align:center">
 						<h1 style="text-align:center;">Registration Details</h1>
@@ -80,7 +80,7 @@
 						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px"/><br> 
   						<span id='message' style="margin-left:120px"></span><br>
 						City: 
-						<!--added php support to add infinite no of select options-->
+						
 						<?php 
 							$result = $conn->query("select cityname from city");	
 							echo "<select name=\"city\" style=\"margin-left:102px\">";

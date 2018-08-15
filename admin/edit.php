@@ -145,7 +145,7 @@
 						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px" <?php if((isset($_POST['sub2']))){ echo "Disabled";}?>/><br> 
   						<span id='message' style="margin-left:120px"></span><br>
 						City: 
-						<!--these kinds of select statements should be changed into php to auto populate-->
+						
 						<?php 
 							
 							if(isset($_POST['sub2'])){

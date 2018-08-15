@@ -104,14 +104,11 @@
 				<?php
 					if (null !==(filter_input(INPUT_POST, 'Search2'))){
 						if (isset($_POST['Search2'])) {
-							//$ocp=$_POST['ocp'];
-							//$city=$_POST['city'];
+							
 							$skill=$_POST['skill'];
 							$var_value1 = $_POST['ocu'];
 							$var_value2 = $_POST['cityname'];
-							//echo $var_value1;
-							//echo $var_value2;
-							//echo $skill;
+							
 							$sql = "SELECT FirstName, LastName, Email, ContactNo, Rate FROM technician WHERE TechID IN (SELECT TechID FROM techskill WHERE SkID ='$skill') AND City='$var_value2'";
 							$sql2 = "INSERT INTO techcount (techid) VALUES ('$var_value1');";
 							$sql3 = "INSERT INTO skillcount (skid) VALUES ('$skill');";
@@ -123,7 +120,7 @@
 								echo "<table>";
 								echo "<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Contact No</th><th>Rate (Rs.)</th></tr>";
 								while ($row=mysqli_fetch_assoc($result)){
-									//$uname = $row['TechID'];
+									
 									$first = $row['FirstName'];
 									$last = $row['LastName'];
 									$email = $row['Email'];
