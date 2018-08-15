@@ -199,17 +199,15 @@
         $lname = filter_input(INPUT_POST,'lname');
         $cont = filter_input(INPUT_POST,'cont');
         $email = filter_input(INPUT_POST,'email');
-        $password = filter_input(INPUT_POST,'pw');
         $ocp = filter_input(INPUT_POST,'ocp');
         $city = filter_input(INPUT_POST,'city');
 		$skill1 = filter_input(INPUT_POST,'skid1');
 		$skill2 = filter_input(INPUT_POST,'skid2');
 		$skill3 = filter_input(INPUT_POST,'skid3');
 		$rate = filter_input(INPUT_POST,'rate');
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 		
 		
-		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Password,Occupation,City,Rate) VALUES ('$uname','$fname','$lname','$email','$cont','$hashed_password','$ocp','$city','$rate');";
+		$sql2 = "INSERT INTO Technician (TechID,FirstName,LastName,Email,ContactNo,Occupation,City,Rate) VALUES ('$uname','$fname','$lname','$email','$cont','$ocp','$city','$rate');";
 		
 		if ($skill1 != "" && $skill2 != "" && $skill3 != ""){	
 			$sql2 .= "INSERT INTO techskill (TechID,SkID) VALUES ('$uname','$skill1');";
