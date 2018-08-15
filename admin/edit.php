@@ -141,8 +141,8 @@
 						Last Name: <input type="text" name="lname" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $lname;}?>" style="margin-left:50px" required/><br><br>
 						Contact Number: <input type="text" name="cont" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $cont;}?>" required/><br><br>
 						Email: <input type="text" name="email" value="<?php if(isset($_POST['sub']) || (isset($_POST['sub2']))){ echo $email;}?>" style="margin-left:90px" required/><br><br>
-						Password: <input type="password" placeholder="Leave empty for technician" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();'/><br><br>
-						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px"/><br> 
+						Password: <input type="password" placeholder="Leave empty for technician" id="password" name="pw" value="" style="margin-left:60px" onkeyup='check();' <?php if((isset($_POST['sub2']))){ echo "Disabled";}?>/><br><br>
+						Confirm Password:<input type="password" placeholder="Leave empty for technician" name="confirm_password" id="confirm_password"  onkeyup='check();' style="margin-left:5px" <?php if((isset($_POST['sub2']))){ echo "Disabled";}?>/><br> 
   						<span id='message' style="margin-left:120px"></span><br>
 						City: 
 						<!--these kinds of select statements should be changed into php to auto populate-->
@@ -163,7 +163,7 @@
 							}
 							echo "</select><br><br>";
 						?>
-						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="<?php if((isset($_POST['sub2']))){ echo $rate;}?>" style="margin-left:98px"/><br><br>
+						Rate: <input type="text" name="rate" placeholder="Leave empty for admin" value="<?php if((isset($_POST['sub2']))){ echo $rate;}?>" style="margin-left:98px" <?php if((isset($_POST['sub']))){ echo "Disabled";}?>/><br><br>
 						<button type="submit" name="edit" style="width:210px">Change Admin Details</button>
 						<button type="submit" name="edit2" style="width:210px">Change Technician Details</button>
 						
